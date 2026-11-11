@@ -1,0 +1,1834 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>melody marks无切减全集 - 无删减作品合集与演员专题</title>
+  <meta name="description" content="melody marks无切减全集是围绕演员Melody Marks无删减作品整理的内容聚合页，覆盖无切减影片、系列专题、幕后花絮、评分与观众讨论，适合查找完整版作品与类型对比的观众。">
+  <meta name="keywords" content="melody marks无切减全集">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23b3426e'/%3E%3Ctext x='16' y='21' font-size='14' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --primary: #b3426e;
+      --primary-light: #f5dbe4;
+      --primary-dark: #7d2649;
+      --bg: #fcf8f9;
+      --surface: #ffffff;
+      --text: #2c2228;
+      --text-secondary: #6b5c63;
+      --text-tertiary: #9e8f96;
+      --border: #eadde2;
+      --radius-card: 16px;
+      --radius-btn: 10px;
+      --radius-tag: 6px;
+      --radius-banner: 20px;
+      --shadow: 0 2px 8px rgba(44, 34, 40, 0.06);
+      --shadow-hover: 0 8px 24px rgba(44, 34, 40, 0.10);
+      --font: system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      --max-width: 1380px;
+      --header-height: 64px;
+      --notice-height: 40px;
+      --sticky-offset: calc(var(--notice-height) + var(--header-height) + 8px);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--sticky-offset); }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; object-fit: cover; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    ul { list-style: none; }
+
+    /* ---------- 公告条 ---------- */
+    .notice-bar {
+      position: sticky;
+      top: 0;
+      z-index: 110;
+      background: var(--primary-dark);
+      color: #fff;
+      height: var(--notice-height);
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      overflow: hidden;
+    }
+    .notice-bar .container {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      width: 100%;
+    }
+    .notice-brand {
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+      color: #ffd9e4;
+    }
+    .notice-items {
+      display: flex;
+      gap: 32px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      white-space: nowrap;
+    }
+    .notice-items::-webkit-scrollbar { display: none; }
+    .notice-items span { opacity: 0.92; }
+    .notice-items b { color: #ffd9e4; font-weight: 600; }
+
+    /* ---------- 页头 ---------- */
+    .site-header {
+      position: sticky;
+      top: var(--notice-height);
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      height: var(--header-height);
+    }
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 17px;
+      color: var(--primary-dark);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .logo svg { width: 32px; height: 32px; }
+    .main-nav {
+      display: flex;
+      gap: 22px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .main-nav::-webkit-scrollbar { display: none; }
+    .main-nav a { white-space: nowrap; padding: 4px 0; border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
+    .main-nav a:hover { color: var(--primary); border-bottom-color: var(--primary); }
+    .header-actions {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-btn);
+      padding: 6px 12px;
+      gap: 6px;
+      width: 200px;
+    }
+    .search-box input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 13px;
+      width: 100%;
+      color: var(--text);
+      font-family: inherit;
+    }
+    .search-box input::placeholder { color: var(--text-tertiary); }
+    .search-box button { color: var(--primary); font-size: 13px; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      padding: 8px;
+      border-radius: 8px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+    }
+
+    /* ---------- 移动端菜单 ---------- */
+    .mobile-nav-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      z-index: 200;
+    }
+    .mobile-nav-overlay.active { display: block; }
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 280px;
+      height: 100%;
+      background: var(--surface);
+      z-index: 210;
+      padding: 80px 24px 24px;
+      transition: right .3s ease;
+      box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+      overflow-y: auto;
+    }
+    .mobile-nav.active { right: 0; }
+    .mobile-nav a {
+      display: block;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+      color: var(--text-secondary);
+    }
+    .mobile-nav a:hover { color: var(--primary); }
+    .mobile-nav-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 24px;
+      color: var(--text-tertiary);
+      padding: 4px;
+    }
+
+    /* ---------- 首屏 ---------- */
+    .hero {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 40px 24px 32px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero-content h1 {
+      font-size: clamp(28px, 3.6vw, 44px);
+      font-weight: 800;
+      color: var(--primary-dark);
+      line-height: 1.25;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+    .hero-content p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 11px 26px;
+      border-radius: var(--radius-btn);
+      font-size: 14px;
+      font-weight: 600;
+      transition: background .2s, box-shadow .2s;
+    }
+    .btn-primary:hover { background: var(--primary-dark); box-shadow: var(--shadow-hover); }
+    .btn-outline {
+      display: inline-block;
+      border: 1.5px solid var(--primary);
+      color: var(--primary);
+      padding: 10px 24px;
+      border-radius: var(--radius-btn);
+      font-size: 14px;
+      font-weight: 600;
+      transition: background .2s;
+    }
+    .btn-outline:hover { background: var(--primary-light); }
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-svg-wrap {
+      width: 100%;
+      max-width: 380px;
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-svg-wrap { animation: none; }
+    }
+
+    /* ---------- 主布局：三栏 ---------- */
+    .main-layout {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px 48px;
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr) 240px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* 左频道栏 */
+    .channel-sidebar {
+      position: sticky;
+      top: var(--sticky-offset);
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 20px 14px;
+      box-shadow: var(--shadow);
+      font-size: 13.5px;
+    }
+    .channel-sidebar h3 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-tertiary);
+      margin-bottom: 12px;
+      padding-left: 8px;
+    }
+    .channel-sidebar a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px;
+      border-radius: 8px;
+      color: var(--text-secondary);
+      transition: background .15s, color .15s;
+      font-size: 13.5px;
+    }
+    .channel-sidebar a:hover,
+    .channel-sidebar a.current {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+    .channel-sidebar a .dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--primary); flex-shrink: 0;
+    }
+
+    /* 中主内容 */
+    .main-content { min-width: 0; }
+    .section-block {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 28px 26px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+    .section-block h2 {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 6px;
+      line-height: 1.35;
+    }
+    .section-intro {
+      font-size: 13.5px;
+      color: var(--text-tertiary);
+      margin-bottom: 18px;
+    }
+
+    /* 概览 */
+    .overview-text {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.9;
+    }
+    .overview-text p + p { margin-top: 12px; }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .content-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--surface);
+      transition: box-shadow .2s, transform .2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .content-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+    }
+    .card-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      background: var(--primary-light);
+    }
+    .card-body {
+      padding: 14px 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.4;
+    }
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: var(--radius-tag);
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-weight: 500;
+      line-height: 1.6;
+    }
+    .tag.outline {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-tertiary);
+    }
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      flex: 1;
+    }
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--text-tertiary);
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+      margin-top: 4px;
+    }
+    .card-meta .hot { color: var(--primary); font-weight: 600; }
+
+    /* 更新列表 */
+    .update-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .update-item {
+      display: flex;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+    .update-item:last-child { border-bottom: none; }
+    .update-date {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+      min-width: 64px;
+      padding-top: 2px;
+    }
+    .update-body { flex: 1; min-width: 0; }
+    .update-title {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+    .update-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+    .update-tag {
+      font-size: 11px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      padding: 1px 8px;
+      border-radius: var(--radius-tag);
+      margin-left: 8px;
+      font-weight: 500;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 12px;
+    }
+    .category-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--bg);
+      transition: border-color .2s, background .2s;
+    }
+    .category-item:hover {
+      border-color: var(--primary);
+      background: var(--primary-light);
+    }
+    .category-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .category-count {
+      font-size: 12px;
+      color: var(--text-tertiary);
+    }
+
+    /* 深度解析 */
+    .deep-analysis h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin: 24px 0 10px;
+    }
+    .deep-analysis h3:first-of-type { margin-top: 4px; }
+    .deep-analysis p {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.9;
+      margin-bottom: 10px;
+    }
+    .deep-analysis ul {
+      margin: 8px 0 14px 4px;
+      padding-left: 18px;
+      list-style: disc;
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+    .deep-analysis li { margin-bottom: 4px; }
+    .pull-quote {
+      border-left: 3px solid var(--primary);
+      padding: 12px 18px;
+      margin: 16px 0;
+      background: var(--bg);
+      border-radius: 0 8px 8px 0;
+      font-size: 14px;
+      color: var(--text-secondary);
+      font-style: italic;
+      line-height: 1.8;
+    }
+
+    /* 体验指南 */
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      counter-reset: step;
+    }
+    .guide-step {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .step-num {
+      counter-increment: step;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .step-num::before { content: counter(step); }
+    .step-body h4 {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .step-body p {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 8px; }
+    details.faq-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--surface);
+    }
+    details.faq-item summary {
+      padding: 14px 18px;
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      transition: background .15s;
+    }
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary::after {
+      content: '+';
+      font-size: 20px;
+      color: var(--primary);
+      font-weight: 400;
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    details.faq-item[open] summary::after { transform: rotate(45deg); }
+    details.faq-item summary:hover { background: var(--bg); }
+    .faq-answer {
+      padding: 0 18px 16px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.85;
+    }
+
+    /* 评论 */
+    .comment-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .comment-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 12px;
+    }
+    .comment-item:last-child { border-bottom: none; }
+    .comment-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      flex-shrink: 0;
+      text-transform: uppercase;
+    }
+    .comment-body { flex: 1; min-width: 0; }
+    .comment-header {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 3px;
+    }
+    .comment-name {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .comment-time {
+      font-size: 11px;
+      color: var(--text-tertiary);
+    }
+    .comment-text {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* 资讯 */
+    .news-list { display: flex; flex-direction: column; gap: 0; }
+    .news-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .news-item:last-child { border-bottom: none; }
+    .news-title {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .news-meta {
+      display: flex;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--text-tertiary);
+      margin-bottom: 4px;
+    }
+    .news-summary {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* 相关推荐 */
+    .rec-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .rec-tag {
+      font-size: 13px;
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: var(--text-secondary);
+      transition: border-color .2s, color .2s, background .2s;
+    }
+    .rec-tag:hover {
+      border-color: var(--primary);
+      color: var(--primary-dark);
+      background: var(--primary-light);
+    }
+
+    /* 榜单 */
+    .rank-list { display: flex; flex-direction: column; gap: 0; }
+    .rank-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+    .rank-item:last-child { border-bottom: none; }
+    .rank-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: var(--bg);
+      color: var(--text-tertiary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .rank-item:nth-child(1) .rank-num { background: var(--primary); color: #fff; }
+    .rank-item:nth-child(2) .rank-num { background: var(--primary-light); color: var(--primary-dark); }
+    .rank-item:nth-child(3) .rank-num { background: var(--primary-light); color: var(--primary-dark); }
+    .rank-name { flex: 1; font-weight: 500; }
+    .rank-score { font-size: 12px; color: var(--primary); font-weight: 600; }
+
+    /* 右辅助栏 */
+    .right-sidebar {
+      position: sticky;
+      top: var(--sticky-offset);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .side-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+    .side-card h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .side-list { display: flex; flex-direction: column; gap: 10px; }
+    .side-list li {
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--text-secondary);
+      display: flex;
+      gap: 8px;
+    }
+    .side-list li .idx {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 12px;
+      min-width: 16px;
+    }
+    .side-list a:hover { color: var(--primary); }
+
+    /* 投稿互动 */
+    .submission-box {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: #fff;
+      border-radius: var(--radius-card);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .submission-box h3 {
+      font-size: 17px;
+      font-weight: 700;
+      border: none;
+      padding: 0;
+      color: #fff;
+      margin: 0;
+    }
+    .submission-box p {
+      font-size: 13.5px;
+      line-height: 1.75;
+      opacity: 0.9;
+    }
+    .submission-box .btn-light {
+      display: inline-block;
+      background: #fff;
+      color: var(--primary-dark);
+      padding: 9px 22px;
+      border-radius: var(--radius-btn);
+      font-size: 13.5px;
+      font-weight: 700;
+      align-self: flex-start;
+      transition: background .2s, transform .2s;
+    }
+    .submission-box .btn-light:hover { background: var(--primary-light); transform: translateY(-2px); }
+
+    /* 页尾 */
+    .site-footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 48px 24px 32px;
+      margin-top: 16px;
+    }
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 32px;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 16px;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+    .footer-brand svg { width: 28px; height: 28px; }
+    .footer-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      max-width: 320px;
+    }
+    .footer-col h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 8px; }
+    .footer-col a {
+      font-size: 13px;
+      color: var(--text-secondary);
+      transition: color .15s;
+    }
+    .footer-col a:hover { color: var(--primary); }
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 32px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text-tertiary);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* 回到顶部 */
+    .back-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-hover);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s, transform .25s;
+      z-index: 90;
+    }
+    .back-top.visible { opacity: 1; pointer-events: auto; }
+    .back-top:hover { transform: translateY(-3px); }
+
+    /* 无结果 */
+    .no-results {
+      display: none;
+      padding: 24px;
+      text-align: center;
+      color: var(--text-tertiary);
+      font-size: 14px;
+    }
+
+    /* ---------- 响应式 ---------- */
+    @media (max-width: 1100px) {
+      .main-layout { grid-template-columns: 160px minmax(0, 1fr); }
+      .right-sidebar { display: none; }
+    }
+    @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; gap: 24px; }
+      .hero-visual { display: none; }
+      .main-layout { grid-template-columns: 1fr; gap: 20px; }
+      .channel-sidebar {
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 14px;
+      }
+      .channel-sidebar h3 { width: 100%; margin-bottom: 4px; }
+      .channel-sidebar a {
+        padding: 6px 12px;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        font-size: 12.5px;
+      }
+      .main-nav { display: none; }
+      .hamburger { display: flex; }
+      .search-box { width: 140px; }
+    }
+    @media (max-width: 740px) {
+      .header-inner { padding: 0 16px; gap: 14px; }
+      .search-box { display: none; }
+      .hero { padding: 28px 16px 20px; }
+      .main-layout { padding: 0 16px 32px; }
+      .section-block { padding: 20px 16px; }
+      .card-grid { grid-template-columns: 1fr; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .footer-desc { max-width: none; }
+      .notice-items { gap: 18px; }
+      .update-item { flex-direction: column; gap: 4px; }
+      .update-date { min-width: auto; }
+      .back-top { bottom: 18px; right: 18px; width: 40px; height: 40px; }
+      .comment-item { gap: 8px; }
+    }
+    @media (max-width: 480px) {
+      .footer-inner { grid-template-columns: 1fr; }
+      .hero-content h1 { font-size: 26px; }
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ===== 吸顶公告条 ===== -->
+<div class="notice-bar">
+  <div class="container">
+    <span class="notice-brand">melody marks无切减全集</span>
+    <div class="notice-items">
+      <span><b>11月7日</b> 更新《Midnight Bloom》完整版未删减片段</span>
+      <span><b>11月6日</b> 新增 3 部 2025 年系列作品无切减版本</span>
+      <span><b>11月5日</b> 专题页收录量突破 85 部</span>
+      <span><b>11月4日</b> 幕后花絮《Behind the Lens》上线</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 吸顶页头 ===== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo" aria-label="melody marks无切减全集 首页">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="16" cy="16" r="15" fill="#b3426e"/>
+        <path d="M9 22V10l7 6 7-6v12" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      melody marks无切减全集
+    </a>
+    <nav class="main-nav" aria-label="主题导航">
+      <a href="#overview">领域概览</a>
+      <a href="#featured">精选推荐</a>
+      <a href="#updates">最新更新</a>
+      <a href="#categories">分类入口</a>
+      <a href="#analysis">深度解析</a>
+      <a href="#guide">体验指南</a>
+      <a href="#faq">常见问答</a>
+      <a href="#comments">观众评论</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-box" id="searchBox">
+        <input type="search" id="searchInput" placeholder="搜索作品或标签…" aria-label="站内搜索">
+        <button type="button" id="searchBtn" aria-label="搜索">⌕</button>
+      </div>
+      <button class="hamburger" id="hamburgerBtn" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- 移动端菜单 -->
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="移动端导航">
+  <button class="mobile-nav-close" id="mobileNavClose" aria-label="关闭菜单">✕</button>
+  <a href="#overview">领域概览</a>
+  <a href="#featured">精选推荐</a>
+  <a href="#updates">最新更新</a>
+  <a href="#categories">分类入口</a>
+  <a href="#analysis">深度解析</a>
+  <a href="#guide">体验指南</a>
+  <a href="#faq">常见问答</a>
+  <a href="#comments">观众评论</a>
+  <a href="#news">相关资讯</a>
+  <a href="#recommend">相关推荐</a>
+  <a href="#ranking">热门榜单</a>
+  <a href="#submission">投稿交流</a>
+</nav>
+
+<!-- ===== 首屏 ===== -->
+<section class="hero" aria-label="首屏">
+  <div class="hero-content">
+    <h1>melody marks无切减全集</h1>
+    <p>汇聚 Melody Marks 无删减版影片、系列专题、幕后花絮与观众评分，按年份、类型与场景分类整理，适合希望看到完整版、对比不同版本差异的观众查阅。</p>
+    <div class="hero-actions">
+      <a href="#featured" class="btn-primary">浏览精选作品</a>
+      <a href="#categories" class="btn-outline">按分类查找</a>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <div class="hero-svg-wrap">
+      <svg viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="heroGrad" x1="0" y1="0" x2="400" y2="320" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#f5dbe4"/>
+            <stop offset="1" stop-color="#b3426e"/>
+          </linearGradient>
+          <linearGradient id="heroGrad2" x1="100" y1="40" x2="300" y2="280" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#ffffff" stop-opacity="0.85"/>
+            <stop offset="1" stop-color="#f5dbe4" stop-opacity="0.4"/>
+          </linearGradient>
+        </defs>
+        <rect x="40" y="40" width="320" height="240" rx="24" fill="url(#heroGrad)" opacity="0.25"/>
+        <circle cx="200" cy="160" r="90" fill="url(#heroGrad2)"/>
+        <path d="M170 130 L170 190 L230 160 Z" fill="#b3426e" opacity="0.8"/>
+        <circle cx="200" cy="160" r="110" stroke="#b3426e" stroke-opacity="0.2" stroke-width="2"/>
+        <circle cx="200" cy="160" r="130" stroke="#b3426e" stroke-opacity="0.1" stroke-width="1.5"/>
+        <rect x="60" y="230" width="60" height="6" rx="3" fill="#b3426e" opacity="0.35"/>
+        <rect x="60" y="246" width="40" height="6" rx="3" fill="#b3426e" opacity="0.2"/>
+        <rect x="280" y="230" width="60" height="6" rx="3" fill="#b3426e" opacity="0.35"/>
+        <rect x="300" y="246" width="40" height="6" rx="3" fill="#b3426e" opacity="0.2"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 主布局：三栏 ===== -->
+<div class="main-layout">
+
+  <!-- 左频道栏 -->
+  <aside class="channel-sidebar" aria-label="频道索引">
+    <h3>频道索引</h3>
+    <a href="#overview" class="current"><span class="dot"></span>领域概览</a>
+    <a href="#featured"><span class="dot"></span>精选作品</a>
+    <a href="#updates"><span class="dot"></span>更新动态</a>
+    <a href="#categories"><span class="dot"></span>类型分类</a>
+    <a href="#analysis"><span class="dot"></span>版本解析</a>
+    <a href="#guide"><span class="dot"></span>观看路径</a>
+    <a href="#faq"><span class="dot"></span>常见问答</a>
+    <a href="#comments"><span class="dot"></span>观众评论</a>
+    <a href="#news"><span class="dot"></span>相关资讯</a>
+    <a href="#recommend"><span class="dot"></span>相关推荐</a>
+    <a href="#ranking"><span class="dot"></span>热门榜单</a>
+    <a href="#submission"><span class="dot"></span>投稿交流</a>
+  </aside>
+
+  <!-- 中主内容 -->
+  <main class="main-content">
+
+    <!-- 1. 领域概览 -->
+    <section class="section-block" id="overview">
+      <h2>Melody Marks 无删减作品领域概览</h2>
+      <p class="section-intro">从类型、年份与发行版本三个角度梳理当前可查阅的内容方向</p>
+      <div class="overview-text">
+        <p>Melody Marks 的作品在 2023 年至 2025 年间形成了较为清晰的类型分线：剧情长片、场景短片与幕后纪录三种形态各有稳定的制作班底。剧情长片通常带有完整叙事线，片长在 45 至 90 分钟之间，场景短片则集中在 15 至 30 分钟，幕后纪录多为 10 分钟上下的花絮剪辑。无删减版本与剪辑版的差异，往往集中在三处：场景之间的过渡段落、对白较长的铺垫戏，以及片尾的额外镜头。</p>
+        <p>2025 年下半年以来，几部关注度较高的作品均推出了完整版。例如《Midnight Bloom》在 10 月 22 日上线的无切减版本比公映版多出约 12 分钟，主要补回了开场前情与第二幕的一段对话；《Velvet Hours》的完整版则在 9 月中旬放出，额外收录了两场室内戏。这些版本差异在观众讨论中形成了比较明确的对照，也构成了查找无删减内容时最实际的判断依据。</p>
+        <p>从类型分布看，都市情感与悬疑氛围两类占据多数，其次是小场景对话戏与旅行外景。不同导演对完整版的剪辑思路不一：有的把删减段落作为独立花絮放出，有的则只在完整版中保留。查找时先确认发行方是否标注“Uncut”或“Full Version”，再对照片长与网友整理的场景清单，是目前比较可靠的两步核对方式。</p>
+      </div>
+    </section>
+
+    <!-- 2. 精选内容推荐 -->
+    <section class="section-block" id="featured">
+      <h2>精选无删减作品推荐</h2>
+      <p class="section-intro">按近期关注度与版本完整度筛选的 8 部作品</p>
+      <div class="card-grid" id="featuredGrid">
+        <article class="content-card" data-search="Midnight Bloom 剧情 完整版 无删减">
+          <img class="card-img" src="https://picsum.photos/seed/melody_midnight/400/300" alt="《Midnight Bloom》无删减版封面，暗色调室内场景" width="400" height="300" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">《Midnight Bloom》无删减完整版</h3>
+            <div class="card-tags"><span class="tag">剧情长片</span><span class="tag outline">2025</span><span class="tag outline">Uncut</span></div>
+            <p class="card-desc">比公映版多出 12 分钟，补回开场前情与第二幕对白。暗调摄影与室内长镜头是主要看点，完整版段落让角色动机更连贯。</p>
+            <div class="card-meta"><span class="hot">热度 9.4</span><span>11月2日更新</span></div>
+          </div>
+        </article>
+        <article class="content-card" data-search="Velvet Hours 悬疑 完整版 无删减">
+          <img class="card-img" src="https://picsum.photos/seed/melody_velvet/400/300" alt="《Velvet Hours》完整版封面，暖色灯光下的室内场景" width="400" height="300" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">《Velvet Hours》完整版</h3>
+            <div class="card-tags"><span class="tag">悬疑氛围</span><span class="tag outline">2025</span><span class="tag outline">Full Version</span></div>
+            <p class="card-desc">完整版多出两场室内戏，集中在第二幕中段。节奏比剪辑版慢半拍，但线索铺陈更完整，适合对照观看。</p>
+            <div class="card-meta"><span class="hot">热度 9.1</span><span>10月28日更新</span></div>
+          </div>
+        </article>
+        <article class="content-card" data-search="Glass Garden 都市情感 无删减">
+          <img class="card-img" src="https://picsum.photos/seed/melody_glass/400/300" alt="《Glass Garden》无删减版封面，玻璃温室场景" width="400" height="300" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">《Glass Garden》无切减版</h3>
+            <div class="card-tags"><span class="tag">都市情感</span><span class="tag outline">2024</span><span class="tag outline">Uncut</span></div>
+            <p class="card-desc">温室场景的完整镜头首次收录，结尾多出一段 4 分钟独白。相比剪辑版，完整版对角色关系的交代更直接。</p>
+            <div class="card-meta"><span class="hot">热度 8.7</span><span>10月25日更新</span></div>
+          </div>
+        </article>
+        <article class="content-card" data-search="Paper Moon 剧情 完整版 幕后">
+          <img class="card-img" src="https://picsum.photos/seed/melody_paper/400/300" alt="《Paper Moon》无删减版封面，夜景街道场景" width="400" height="300" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">《Paper Moon》完整版 + 幕后花絮</h3>
+            <div class="card-tags"><span class="tag">剧情长片</span><span class="tag outline">2025</span><span class="tag outline">花絮</span></div>
+            <p class="card-desc">完整版含一段 7 分钟的夜景长镜头，幕后花絮记录了该镜头的三次重拍。两个版本对照看能看出剪辑取舍。</p>
+            <div class="card-meta"><span class="hot">热度 8.5</span><span>10月20日更新</span></div>
+          </div>
+        </article>
+        <article class="content-card" data-search="Afterglow Sessions 场景短片 无删减">
+          <img class="card-img" src="https://picsum.photos/seed/melody_after/400/300" alt="《Afterglow Sessions》场景短片合集封面，暖色调室内" width="400" height="300" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">《Afterglow Sessions》场景合集</h3>
+            <div class="card-tags"><span class="tag">场景短片</span><span class="tag outline">2024</span><span class="tag outline">合集</span></div>
+            <p class="card-desc">六段短场景合并为一张完整版，每段单独发行时均有删减。合集版保留了场与场之间的过渡镜头，总长约 72 分钟。</p>
+            <div class="card-meta"><span class="hot">热度 8.2</span><span>10月18日更新</span></div>
+          </div>
+        </article>
+        <article class="content-card" data-search="Northern Light 旅行外景 无删减">
+          <img class="card-img" src="https://picsum.photos/seed/melody_north/400/300" alt="《Northern Light》无删减版封面，户外自然光场景" width="400" height="300" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">《Northern Light》完整外景版</h3>
+            <div class="card-tags"><span class="tag">旅行外景</span><span class="tag outline">2025</span><span class="tag outline">Full Version</span></div>
+            <p class="card-desc">外景段落比剪辑版多出 9 分钟，包含两段徒步镜头。自然光拍摄的连续性在完整版中更明显，剪辑版跳切较多。</p>
+            <div class="card-meta"><span class="hot">热度 8.0</span><span>10月15日更新</span></div>
+          </div>
+        </article>
+        <article class="content-card" data-search="Static Noise 悬疑 无删减">
+          <img class="card-img" src="https://picsum.photos/seed/melody_static/400/300" alt="《Static Noise》无删减版封面，冷色调室内" width="400" height="300" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">《Static Noise》无切减版</h3>
+            <div class="card-tags"><span class="tag">悬疑氛围</span><span class="tag outline">2024</span><span class="tag outline">Uncut</span></div>
+            <p class="card-desc">完整版补回了一段 6 分钟的无线电对白戏，是理解结尾反转的关键。剪辑版删去后，结尾显得突兀。</p>
+            <div class="card-meta"><span class="hot">热度 7.8</span><span>10月12日更新</span></div>
+          </div>
+        </article>
+        <article class="content-card" data-search="Slow Tide 剧情 完整版">
+          <img class="card-img" src="https://picsum.photos/seed/melody_slow/400/300" alt="《Slow Tide》完整版封面，海边场景" width="400" height="300" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">《Slow Tide》完整版</h3>
+            <div class="card-tags"><span class="tag">剧情长片</span><span class="tag outline">2023</span><span class="tag outline">Full Version</span></div>
+            <p class="card-desc">早期作品的完整修复版，画质提升明显。额外收录的 5 分钟结尾段落此前只在影展放映过，普通渠道较难找到。</p>
+            <div class="card-meta"><span class="hot">热度 7.6</span><span>10月8日更新</span></div>
+          </div>
+        </article>
+      </div>
+      <div class="no-results" id="noResults">没有找到匹配的作品，请更换关键词。</div>
+    </section>
+
+    <!-- 3. 最新更新 / 动态 -->
+    <section class="section-block" id="updates">
+      <h2>近期更新与版本动态</h2>
+      <p class="section-intro">2026 年 10 月至 11 月期间上线的无删减版本与花絮</p>
+      <div class="update-list">
+        <div class="update-item">
+          <span class="update-date">11月7日</span>
+          <div class="update-body">
+            <div class="update-title">《Midnight Bloom》完整版新增幕后音轨<span class="update-tag">新增</span></div>
+            <div class="update-desc">导演评论音轨随完整版一并放出，时长 51 分钟，其中提到第二幕对白戏曾被剪短 3 分钟。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月6日</span>
+          <div class="update-body">
+            <div class="update-title">2025 年三部剧情长片无切减版合集上线</div>
+            <div class="update-desc">包含《Velvet Hours》《Paper Moon》《Northern Light》，每部均标注完整版片长与删减对照说明。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月5日</span>
+          <div class="update-body">
+            <div class="update-title">专题收录条目达 85 部，新增年份筛选</div>
+            <div class="update-desc">按 2023、2024、2025 三个年份段整理，其中 2024 年收录 31 部，2025 年收录 28 部。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月4日</span>
+          <div class="update-body">
+            <div class="update-title">幕后花絮《Behind the Lens》上线</div>
+            <div class="update-desc">14 分钟纪录片，记录《Glass Garden》温室场景的布光调整与两次重拍。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月2日</span>
+          <div class="update-body">
+            <div class="update-title">《Static Noise》完整版重制画质</div>
+            <div class="update-desc">修复了原版暗部噪点问题，收音部分也做了重新混音，对白清晰度提升。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">10月30日</span>
+          <div class="update-body">
+            <div class="update-title">《Afterglow Sessions》合集版补入过渡镜头</div>
+            <div class="update-desc">六段短场景之间新增 6 段过渡画面，总时长增加约 4 分钟，场与场的衔接更自然。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">10月28日</span>
+          <div class="update-body">
+            <div class="update-title">《Velvet Hours》完整版上线</div>
+            <div class="update-desc">多出两场室内戏，分别位于第二幕开头和中段，每场约 5 分钟。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">10月25日</span>
+          <div class="update-body">
+            <div class="update-title">《Glass Garden》结尾独白完整收录</div>
+            <div class="update-desc">4 分钟独白在剪辑版中被整段删除，完整版恢复后结尾情绪落点明显不同。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">10月22日</span>
+          <div class="update-body">
+            <div class="update-title">《Paper Moon》夜景长镜头花絮同步上线</div>
+            <div class="update-desc">7 分钟长镜头的三次重拍过程以分屏方式呈现，可对比机位调整前后的画面差异。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">10月18日</span>
+          <div class="update-body">
+            <div class="update-title">场景短片专区新增 6 部完整版</div>
+            <div class="update-desc">均为 2024 年发行的短片，单部时长 15 至 28 分钟，完整版补回开场镜头。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 分类入口 -->
+    <section class="section-block" id="categories">
+      <h2>按类型与主题分类查找</h2>
+      <p class="section-intro">8 个常用分类，每个对应可搜索的作品类型词</p>
+      <div class="category-grid">
+        <a href="#featured" class="category-item">
+          <span class="category-name">剧情长片</span>
+          <span class="category-count">收录 24 部 · 含完整版 19 部</span>
+        </a>
+        <a href="#featured" class="category-item">
+          <span class="category-name">场景短片</span>
+          <span class="category-count">收录 31 部 · 含完整版 26 部</span>
+        </a>
+        <a href="#featured" class="category-item">
+          <span class="category-name">幕后花絮</span>
+          <span class="category-count">收录 12 部 · 纪录片与特辑</span>
+        </a>
+        <a href="#featured" class="category-item">
+          <span class="category-name">都市情感</span>
+          <span class="category-count">收录 18 部 · 2023—2025</span>
+        </a>
+        <a href="#featured" class="category-item">
+          <span class="category-name">悬疑氛围</span>
+          <span class="category-count">收录 9 部 · 含完整版 8 部</span>
+        </a>
+        <a href="#featured" class="category-item">
+          <span class="category-name">旅行外景</span>
+          <span class="category-count">收录 7 部 · 自然光拍摄</span>
+        </a>
+        <a href="#featured" class="category-item">
+          <span class="category-name">导演评论音轨</span>
+          <span class="category-count">收录 5 部 · 随完整版放出</span>
+        </a>
+        <a href="#featured" class="category-item">
+          <span class="category-name">删减片段对照</span>
+          <span class="category-count">收录 11 部 · 场景清单整理</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 5. 深度解析 -->
+    <section class="section-block deep-analysis" id="analysis">
+      <h2>无删减版本的判断维度与常见误区</h2>
+      <p class="section-intro">从片长、发行标注与场景清单三方面拆解完整版的识别方法</p>
+
+      <h3>片长差异不能单独作为判断依据</h3>
+      <p>完整版与剪辑版的时长差是观众最先注意到的信号，但片长本身并不可靠。以《Midnight Bloom》为例，公映版 78 分钟，完整版 90 分钟，差 12 分钟；而《Velvet Hours》公映版 64 分钟，完整版 74 分钟，差 10 分钟。同样是 10 分钟上下的差距，前者的删减集中在叙事铺垫，后者则分散在两场室内戏。只看总时长，无法判断删掉的是关键情节还是过渡镜头。</p>
+      <p>更实际的做法是对照场景清单。目前观众整理较完整的清单通常按时间码列出：开场、第一幕、第二幕转折、第三幕与结尾，每段标注完整版与剪辑版的差异。片长差 12 分钟的《Midnight Bloom》，清单显示其中 8 分钟落在开场前情，4 分钟落在第二幕对白；片长差 10 分钟的《Velvet Hours》，两场室内戏各占 5 分钟。清单能直接回答“删了什么”，片长只能回答“删了多少”。</p>
+
+      <h3>发行标注的三种常见格式</h3>
+      <p>发行方对完整版的标注并不统一，目前出现较多的有三种：一是片名后加“Uncut”，多见于欧洲发行版本；二是标注“Full Version”或“Complete Edition”，在北美渠道较常见；三是仅在详情页写明“包含未删减场景”，片名不做改动。三种格式的可信度并不相同——前两种是发行方主动标注，第三种需要核对详情页的具体描述。</p>
+      <ul>
+        <li>“Uncut”标注：一般指未做内容删减，但可能仍经过画质或音轨处理。</li>
+        <li>“Full Version”标注：通常包含完整叙事段落，但不一定保留所有幕后内容。</li>
+        <li>详情页描述“包含未删减场景”：需要确认是整段恢复还是仅收录片段。</li>
+      </ul>
+      <p>2025 年 9 月之后，部分发行方开始在详情页附上删减对照表，列出被剪段落的时间码与内容简述。这类对照表比片名标注更可核对，但目前只有少数几部作品提供。</p>
+
+      <h3>幕后花絮与完整版是两条线</h3>
+      <p>花絮容易被当成完整版的替代品，实际上两者收录的内容并不重合。完整版补回的是正片中被剪掉的叙事段落，花絮记录的则是拍摄过程、重拍原因与导演说明。以《Paper Moon》为例，完整版多出的 7 分钟夜景长镜头属于正片内容，而幕后花絮里呈现的是这个镜头三次重拍的机位调整过程——两者互补，但不能互相替代。</p>
+      <div class="pull-quote">判断一部作品是否值得优先看完整版，可以先问：被剪掉的是叙事段落还是过场镜头？前者影响理解，后者只影响节奏。</div>
+      <p>从目前收录的 85 部作品看，完整版比剪辑版多出 8 分钟以上的有 21 部，其中 14 部的删减涉及角色动机或线索交代。剩下 7 部的差异主要是过场镜头与空镜，完整版的观看必要性相对低一些。这个比例可以作为筛选时的参考：片长差大不等于内容差大，关键看删减落在哪一段。</p>
+
+      <h3>不同年份的版本策略差异</h3>
+      <p>2023 年的作品完整版放出较少，多数只发行剪辑版，删减段落以花絮形式单独收录；2024 年开始出现“完整版 + 删减对照”的发行组合，观众可以同时拿到两个版本；2025 年的趋势是完整版与剪辑版同期上线，部分作品还附带导演评论音轨。这一变化意味着，越新的作品越容易找到可核对的完整版信息，早期作品则需要依赖观众整理的场景清单。</p>
+      <p>以《Slow Tide》为例，2023 年发行时只有 71 分钟的剪辑版，完整版直到 2026 年 10 月才以修复形式放出，额外收录 5 分钟结尾段落。这类延迟发行的完整版，画质通常经过修复，但音轨未必重新混音，观看时需要留意版本说明。</p>
+    </section>
+
+    <!-- 6. 体验指南 -->
+    <section class="section-block" id="guide">
+      <h2>无删减作品的观看与比较路径</h2>
+      <p class="section-intro">从类型选择到版本对比的四步判断顺序</p>
+      <div class="guide-steps">
+        <div class="guide-step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <h4>先按类型缩小范围</h4>
+            <p>剧情长片与场景短片的完整版价值不同。剧情长片的删减多涉及叙事，完整版优先看；场景短片的删减多为过场，完整版可按兴趣选择。悬疑氛围类作品的完整版通常更关键，因为线索段落容易被剪。</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <h4>核对片长差与场景清单</h4>
+            <p>片长差 8 分钟以上且清单显示删减落在叙事段落的，优先看完整版。片长差在 5 分钟以内、删减集中在空镜与过场的，剪辑版已经足够。清单比片长更可靠，找不到清单时再退回看片长差。</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <h4>比较同导演不同作品的版本策略</h4>
+            <p>同一位导演的完整版处理方式往往一致。如果某导演习惯把删减段落放入花絮，那么其作品的完整版可能只补回少量正片内容；如果习惯在完整版中恢复全部段落，则优先找完整版。2025 年的几部作品已经能看出这种规律。</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <h4>用评论与评分辅助判断</h4>
+            <p>观众评论里提到“完整版才看懂”“剪辑版结尾突兀”的，通常指向删减涉及关键情节。评分差异也能参考：完整版与剪辑版评分差距在 0.5 分以上的，完整版的观看必要性较高。差距在 0.2 分以内的，两个版本体验接近。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="section-block" id="faq">
+      <h2>常见问答</h2>
+      <p class="section-intro">围绕版本差异与观看选择的 6 个问题</p>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>《Midnight Bloom》完整版比公映版多了哪些内容？</summary>
+          <div class="faq-answer">完整版多出约 12 分钟，其中开场前情约 8 分钟，补回了角色搬入新居前的几段对话；第二幕对白戏约 4 分钟，涉及两位主角的关系转折。片尾字幕后的额外镜头不在完整版内，单独作为花絮放出。</div>
+        </details>
+        <details class="faq-item">
+          <summary>如何判断一部作品是不是真正的无删减版本？</summary>
+          <div class="faq-answer">先看发行方是否在片名或详情页标注“Uncut”“Full Version”或“包含未删减场景”，再看是否有删减对照表或场景清单。片长差可以作为辅助，但需要结合清单确认删减落在哪一段。只有片名标注、没有清单的，可信度中等。</div>
+        </details>
+        <details class="faq-item">
+          <summary>《Velvet Hours》完整版和剪辑版评分差多少？</summary>
+          <div class="faq-answer">完整版评分 8.9，剪辑版 8.4，相差 0.5 分。评论中讨论较多的是第二幕两场室内戏，完整版恢复后线索更连贯，剪辑版则被部分观众认为节奏更快但结尾解释不足。</div>
+        </details>
+        <details class="faq-item">
+          <summary>幕后花絮能代替完整版吗？</summary>
+          <div class="faq-answer">不能。花絮记录的是拍摄过程与重拍原因，完整版补回的是正片中被剪掉的叙事段落。以《Paper Moon》为例，完整版多出的 7 分钟属于正片内容，花絮呈现的是该镜头三次重拍的机位调整，两者收录对象不同。</div>
+        </details>
+        <details class="faq-item">
+          <summary>2023 年的作品为什么完整版比较少？</summary>
+          <div class="faq-answer">2023 年的发行策略以剪辑版为主，删减段落多作为花絮单独收录，完整版发行较少。2024 年开始出现“完整版 + 删减对照”的组合，2025 年则常见完整版与剪辑版同期上线。早期作品如《Slow Tide》的完整版直到 2026 年 10 月才以修复形式放出。</div>
+        </details>
+        <details class="faq-item">
+          <summary>场景短片的完整版值不值得看？</summary>
+          <div class="faq-answer">看删减落在哪一段。场景短片时长较短，删减多为过场镜头与空镜，完整版补回后节奏可能变慢。如果清单显示删减涉及对话或动作段落，完整版值得看；如果只是过渡镜头，剪辑版已经足够。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8. 用户评论 -->
+    <section class="section-block" id="comments">
+      <h2>观众评论</h2>
+      <p class="section-intro">近期围绕具体作品与版本差异的讨论</p>
+      <div class="comment-list">
+        <div class="comment-item">
+          <div class="comment-avatar">林</div>
+          <div class="comment-body">
+            <div class="comment-header"><span class="comment-name">林间雾</span><span class="comment-time">11月7日</span></div>
+            <p class="comment-text">《Midnight Bloom》完整版开场那 8 分钟真的补回了很多信息，剪辑版直接进正题反而让人物关系有点跳。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">陈</div>
+          <div class="comment-body">
+            <div class="comment-header"><span class="comment-name">陈默</span><span class="comment-time">11月6日</span></div>
+            <p class="comment-text">《Velvet Hours》完整版第二幕那两场戏节奏是慢，但线索确实更清楚。剪辑版结尾的解释太赶了。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">周</div>
+          <div class="comment-body">
+            <div class="comment-header"><span class="comment-name">周日不营业</span><span class="comment-time">11月6日</span></div>
+            <p class="comment-text">《Glass Garden》结尾独白被剪掉真的可惜，完整版看完情绪落点完全不一样。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">赵</div>
+          <div class="comment-body">
+            <div class="comment-header"><span class="comment-name">赵小刀</span><span class="comment-time">11月5日</span></div>
+            <p class="comment-text">花絮和完整版我都看了，《Paper Moon》那个夜景长镜头的重拍过程比正片还有意思。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">吴</div>
+          <div class="comment-body">
+            <div class="comment-header"><span class="comment-name">吴所谓</span><span class="comment-time">11月5日</span></div>
+            <p class="comment-text">《Static Noise》完整版补回的对白戏是理解结尾反转的关键，剪辑版删掉之后结尾显得有点硬。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">郑</div>
+          <div class="comment-body">
+            <div class="comment-header"><span class="comment-name">郑在看</span><span class="comment-time">11月4日</span></div>
+            <p class="comment-text">《Afterglow Sessions》合集版的过渡镜头加回来之后顺多了，单独看短片总觉得场与场之间断掉。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">孙</div>
+          <div class="comment-body">
+            <div class="comment-header"><span class="comment-name">孙悟饭团</span><span class="comment-time">11月4日</span></div>
+            <p class="comment-text">2023 年那批作品找完整版真的费劲，很多只有花絮没有正片段落。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">刘</div>
+          <div class="comment-body">
+            <div class="comment-header"><span class="comment-name">刘浪</span><span class="comment-time">11月3日</span></div>
+            <p class="comment-text">《Slow Tide》修复版画质提升挺明显，结尾那 5 分钟以前只在影展放过，现在终于能看到了。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">黄</div>
+          <div class="comment-body">
+            <div class="comment-header"><span class="comment-name">黄灯</span><span class="comment-time">11月3日</span></div>
+            <p class="comment-text">片长差 12 分钟听起来很多，但《Midnight Bloom》那 12 分钟有 8 分钟在开场，正片节奏其实没差多少。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">何</div>
+          <div class="comment-body">
+            <div class="comment-header"><span class="comment-name">何以为家</span><span class="comment-time">11月2日</span></div>
+            <p class="comment-text">《Northern Light》外景完整版徒步镜头加回来之后自然光的连续性明显好了，剪辑版跳切太多。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">马</div>
+          <div class="comment-body">
+            <div class="comment-header"><span class="comment-name">马路边边</span><span class="comment-time">11月1日</span></div>
+            <p class="comment-text">有些完整版其实就是把过场镜头加回来，节奏拖慢，真不如剪辑版紧凑。个人看法。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">朱</div>
+          <div class="comment-body">
+            <div class="comment-header"><span class="comment-name">朱砂痣</span><span class="comment-time">10月30日</span></div>
+            <p class="comment-text">导演评论音轨里提到《Midnight Bloom》第二幕对白戏被剪短 3 分钟，完整版恢复后确实顺很多。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">胡</div>
+          <div class="comment-body">
+            <div class="comment-header"><span class="comment-name">胡桃夹子</span><span class="comment-time">10月29日</span></div>
+            <p class="comment-text">《Paper Moon》完整版和花絮对照看，能看出导演在长镜头上的取舍，挺有意思的。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">郭</div>
+          <div class="comment-body">
+            <div class="comment-header"><span class="comment-name">郭不群</span><span class="comment-time">10月27日</span></div>
+            <p class="comment-text">《Velvet Hours》评分差 0.5 分我觉得合理，完整版确实更完整，但节奏慢也是事实。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">罗</div>
+          <div class="comment-body">
+            <div class="comment-header"><span class="comment-name">罗盘指针</span><span class="comment-time">10月26日</span></div>
+            <p class="comment-text">悬疑类的完整版一般更值得看，线索段落被剪掉影响太大。《Static Noise》就是例子。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">唐</div>
+          <div class="comment-body">
+            <div class="comment-header"><span class="comment-name">唐突</span><span class="comment-time">10月24日</span></div>
+            <p class="comment-text">场景短片的完整版我一般不看，过场镜头加回来节奏反而拖。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">冯</div>
+          <div class="comment-body">
+            <div class="comment-header"><span class="comment-name">冯虚御风</span><span class="comment-time">10月22日</span></div>
+            <p class="comment-text">《Glass Garden》温室场景布光调整花絮里提到重拍了两次，完整版里能看出光线确实不一样。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">许</div>
+          <div class="comment-body">
+            <div class="comment-header"><span class="comment-name">许愿池</span><span class="comment-time">10月20日</span></div>
+            <p class="comment-text">希望 2023 年那几部都能出修复完整版，等《Slow Tide》这种等了挺久的。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. 相关资讯 -->
+    <section class="section-block" id="news">
+      <h2>相关资讯</h2>
+      <p class="section-intro">2026 年 10 月至 11 月的版本发行与作品动态</p>
+      <div class="news-list">
+        <div class="news-item">
+          <div class="news-title">《Midnight Bloom》完整版新增导演评论音轨</div>
+          <div class="news-meta"><span>2026年11月7日</span><span>版本动态</span></div>
+          <p class="news-summary">音轨时长 51 分钟，导演在第二幕对白戏处提到该段曾被剪短 3 分钟，完整版恢复了原长度。</p>
+        </div>
+        <div class="news-item">
+          <div class="news-title">2025 年三部剧情长片无切减版合集上线</div>
+          <div class="news-meta"><span>2026年11月6日</span><span>发行信息</span></div>
+          <p class="news-summary">合集覆盖《Velvet Hours》《Paper Moon》《Northern Light》，每部附删减对照表，标注被剪段落的时间码。</p>
+        </div>
+        <div class="news-item">
+          <div class="news-title">专题收录条目达 85 部，2024 年作品占比最高</div>
+          <div class="news-meta"><span>2026年11月5日</span><span>数据更新</span></div>
+          <p class="news-summary">按年份统计，2024 年收录 31 部，2025 年 28 部，2023 年 26 部。其中标注完整版的有 53 部。</p>
+        </div>
+        <div class="news-item">
+          <div class="news-title">《Behind the Lens》幕后纪录片上线</div>
+          <div class="news-meta"><span>2026年11月4日</span><span>幕后内容</span></div>
+          <p class="news-summary">14 分钟纪录片聚焦《Glass Garden》温室场景，记录布光调整与两次重拍，含未公开的测试画面。</p>
+        </div>
+        <div class="news-item">
+          <div class="news-title">《Static Noise》完整版完成画质重制</div>
+          <div class="news-meta"><span>2026年11月2日</span><span>版本修复</span></div>
+          <p class="news-summary">修复原版暗部噪点问题，收音部分重新混音，对白清晰度提升，完整版时长不变。</p>
+        </div>
+        <div class="news-item">
+          <div class="news-title">《Slow Tide》修复完整版放出 5 分钟影展段落</div>
+          <div class="news-meta"><span>2026年10月8日</span><span>发行信息</span></div>
+          <p class="news-summary">该段落此前仅在影展放映，修复版将其收录进正片，画质经过重新扫描，音轨保持原始混音。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. 相关推荐 -->
+    <section class="section-block" id="recommend">
+      <h2>相关推荐标签</h2>
+      <p class="section-intro">按具体内容方向与作品名索引</p>
+      <div class="rec-tags">
+        <a href="#featured" class="rec-tag">完整版剧情长片</a>
+        <a href="#featured" class="rec-tag">Uncut 发行版</a>
+        <a href="#featured" class="rec-tag">删减对照清单</a>
+        <a href="#featured" class="rec-tag">导演评论音轨</a>
+        <a href="#featured" class="rec-tag">《Paper Moon》长镜头</a>
+        <a href="#featured" class="rec-tag">《Static Noise》线索段落</a>
+        <a href="#featured" class="rec-tag">幕后重拍记录</a>
+        <a href="#featured" class="rec-tag">2024 年场景短片</a>
+      </div>
+    </section>
+
+    <!-- 11. 补充板块：热门榜单 -->
+    <section class="section-block" id="ranking">
+      <h2>本周无删减作品热度榜</h2>
+      <p class="section-intro">按观众评分与近期讨论量排序，截至 11 月 8 日</p>
+      <div class="rank-list">
+        <div class="rank-item"><span class="rank-num">1</span><span class="rank-name">《Midnight Bloom》无删减完整版</span><span class="rank-score">9.4</span></div>
+        <div class="rank-item"><span class="rank-num">2</span><span class="rank-name">《Velvet Hours》完整版</span><span class="rank-score">9.1</span></div>
+        <div class="rank-item"><span class="rank-num">3</span><span class="rank-name">《Glass Garden》无切减版</span><span class="rank-score">8.7</span></div>
+        <div class="rank-item"><span class="rank-num">4</span><span class="rank-name">《Paper Moon》完整版 + 花絮</span><span class="rank-score">8.5</span></div>
+        <div class="rank-item"><span class="rank-num">5</span><span class="rank-name">《Afterglow Sessions》场景合集</span><span class="rank-score">8.2</span></div>
+        <div class="rank-item"><span class="rank-num">6</span><span class="rank-name">《Northern Light》完整外景版</span><span class="rank-score">8.0</span></div>
+      </div>
+    </section>
+
+    <!-- 投稿交流 -->
+    <section class="section-block" id="submission">
+      <div class="submission-box">
+        <h3>投稿与交流</h3>
+        <p>发现新的无删减版本、整理过场景清单，或者想分享版本对比笔记？欢迎提交作品信息或参与讨论，帮助完善条目收录。</p>
+        <a href="#featured" class="btn-light">提交作品信息</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 右辅助栏 -->
+  <aside class="right-sidebar" aria-label="辅助信息">
+    <div class="side-card">
+      <h3>近期更新条目</h3>
+      <ul class="side-list">
+        <li><span class="idx">1</span><a href="#updates">《Midnight Bloom》导演评论音轨</a></li>
+        <li><span class="idx">2</span><a href="#updates">2025 年三部完整版合集</a></li>
+        <li><span class="idx">3</span><a href="#updates">《Behind the Lens》幕后纪录片</a></li>
+        <li><span class="idx">4</span><a href="#updates">《Static Noise》画质重制</a></li>
+        <li><span class="idx">5</span><a href="#updates">《Afterglow Sessions》过渡镜头</a></li>
+      </ul>
+    </div>
+    <div class="side-card">
+      <h3>版本关键词</h3>
+      <div class="rec-tags" style="gap:6px;">
+        <a href="#featured" class="rec-tag" style="font-size:12px;padding:4px 10px;">Uncut</a>
+        <a href="#featured" class="rec-tag" style="font-size:12px;padding:4px 10px;">Full Version</a>
+        <a href="#featured" class="rec-tag" style="font-size:12px;padding:4px 10px;">删减对照</a>
+        <a href="#featured" class="rec-tag" style="font-size:12px;padding:4px 10px;">导演评论</a>
+        <a href="#featured" class="rec-tag" style="font-size:12px;padding:4px 10px;">修复版</a>
+        <a href="#featured" class="rec-tag" style="font-size:12px;padding:4px 10px;">场景清单</a>
+      </div>
+    </div>
+    <div class="side-card">
+      <h3>收录数据</h3>
+      <ul class="side-list">
+        <li>作品总数：<b>85</b> 部</li>
+        <li>标注完整版：<b>53</b> 部</li>
+        <li>2025 年作品：<b>28</b> 部</li>
+        <li>含删减对照：<b>11</b> 部</li>
+        <li>最近更新：<b>11月7日</b></li>
+      </ul>
+    </div>
+  </aside>
+
+</div>
+
+<!-- ===== 页尾 ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" fill="#b3426e"/>
+          <path d="M9 22V10l7 6 7-6v12" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        melody marks无切减全集
+      </div>
+      <p class="footer-desc">收录 2023 至 2025 年 Melody Marks 作品的无删减版本信息，涵盖剧情长片、场景短片与幕后花絮三类内容。条目按发行日期滚动更新，每周补充版本对照与场景清单。</p>
+    </div>
+    <div class="footer-col">
+      <h4>内容分类</h4>
+      <ul>
+        <li><a href="#categories">剧情长片</a></li>
+        <li><a href="#categories">场景短片</a></li>
+        <li><a href="#categories">幕后花絮</a></li>
+        <li><a href="#categories">删减对照</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>快速入口</h4>
+      <ul>
+        <li><a href="#featured">精选作品</a></li>
+        <li><a href="#updates">更新动态</a></li>
+        <li><a href="#analysis">版本解析</a></li>
+        <li><a href="#faq">常见问答</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>互动与帮助</h4>
+      <ul>
+        <li><a href="#submission">投稿交流</a></li>
+        <li><a href="#comments">观众评论</a></li>
+        <li><a href="#news">相关资讯</a></li>
+        <li><a href="#ranking">热度榜单</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>页面内容为示例条目，用于展示作品聚合与版本对照结构。</span>
+    <span>最近更新：2026 年 11 月 8 日</span>
+  </div>
+</footer>
+
+<!-- 回到顶部 -->
+<button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
+
+<!-- 结构化数据 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "melody marks无切减全集",
+  "description": "汇聚 Melody Marks 无删减版影片、系列专题、幕后花絮与观众评分的内容聚合页。",
+  "inLanguage": "zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "《Midnight Bloom》完整版比公映版多了哪些内容？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "完整版多出约 12 分钟，其中开场前情约 8 分钟，补回了角色搬入新居前的几段对话；第二幕对白戏约 4 分钟，涉及两位主角的关系转折。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何判断一部作品是不是真正的无删减版本？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "先看发行方是否在片名或详情页标注 Uncut、Full Version 或包含未删减场景，再看是否有删减对照表或场景清单。片长差可以作为辅助，但需要结合清单确认删减落在哪一段。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "《Velvet Hours》完整版和剪辑版评分差多少？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "完整版评分 8.9，剪辑版 8.4，相差 0.5 分。评论中讨论较多的是第二幕两场室内戏，完整版恢复后线索更连贯。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "幕后花絮能代替完整版吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不能。花絮记录的是拍摄过程与重拍原因，完整版补回的是正片中被剪掉的叙事段落。两者收录对象不同。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "2023 年的作品为什么完整版比较少？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2023 年的发行策略以剪辑版为主，删减段落多作为花絮单独收录，完整版发行较少。2024 年开始出现完整版与删减对照的组合，2025 年常见完整版与剪辑版同期上线。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "场景短片的完整版值不值得看？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "看删减落在哪一段。场景短片时长较短，删减多为过场镜头与空镜，完整版补回后节奏可能变慢。如果清单显示删减涉及对话或动作段落，完整版值得看。"
+      }
+    }
+  ]
+}
+</script>
+
+<script>
+  // 移动端菜单
+  const hamburger = document.getElementById('hamburgerBtn');
+  const mobileNav = document.getElementById('mobileNav');
+  const mobileOverlay = document.getElementById('mobileOverlay');
+  const mobileNavClose = document.getElementById('mobileNavClose');
+
+  function openMobileNav() {
+    mobileNav.classList.add('active');
+    mobileOverlay.classList.add('active');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileNav() {
+    mobileNav.classList.remove('active');
+    mobileOverlay.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', openMobileNav);
+  mobileNavClose.addEventListener('click', closeMobileNav);
+  mobileOverlay.addEventListener('click', closeMobileNav);
+  document.querySelectorAll('.mobile-nav a').forEach(a => {
+    a.addEventListener('click', closeMobileNav);
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && mobileNav.classList.contains('active')) closeMobileNav();
+  });
+
+  // 回到顶部
+  const backTop = document.getElementById('backTop');
+  window.addEventListener('scroll', () => {
+    backTop.classList.toggle('visible', window.scrollY > window.innerHeight);
+  });
+  backTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // 侧栏当前板块高亮
+  const sections = document.querySelectorAll('.main-content section[id]');
+  const navLinks = document.querySelectorAll('.channel-sidebar a');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.toggle('current', link.getAttribute('href') === '#' + entry.target.id);
+        });
+      }
+    });
+  }, { rootMargin: '-20% 0px -60% 0px' });
+  sections.forEach(s => observer.observe(s));
+
+  // 搜索筛选
+  const searchInput = document.getElementById('searchInput');
+  const searchBtn = document.getElementById('searchBtn');
+  const featuredGrid = document.getElementById('featuredGrid');
+  const noResults = document.getElementById('noResults');
+
+  function filterCards() {
+    const q = searchInput.value.trim().toLowerCase();
+    const cards = featuredGrid.querySelectorAll('.content-card');
+    let visible = 0;
+    cards.forEach(card => {
+      const text = (card.getAttribute('data-search') + ' ' + card.textContent).toLowerCase();
+      const match = !q || text.includes(q);
+      card.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+    noResults.style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  searchInput.addEventListener('input', filterCards);
+  searchBtn.addEventListener('click', filterCards);
+  searchInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); filterCards(); }
+  });
+</script>
+
+</body>
+          </html>
