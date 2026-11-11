@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>善良的小姨子 韩剧 中文字幕 - 剧集与字幕聚合</title>
+  <meta name="description" content="善良的小姨子 韩剧 中文字幕聚合页，提供剧集分集看点、中文字幕更新动态、类型对比解析与观众评论。适合追看家庭伦理剧及需要中文字幕的观众浏览。">
+  <meta name="keywords" content="善良的小姨子 韩剧 中文字幕">
+  <style>
+    /* ---------- CSS 变量系统 ---------- */
+    :root {
+      --color-primary: #8b5a4b;        /* 主色：暖褐，家庭剧氛围 */
+      --color-primary-light: #b98e7f;
+      --color-primary-dark: #5e3a2e;
+      --color-bg: #faf7f4;
+      --color-surface: #ffffff;
+      --color-text: #2d2a27;
+      --color-text-secondary: #6b625c;
+      --color-text-muted: #9b918a;
+      --color-border: #e8dfd8;
+      --radius-card: 14px;
+      --radius-btn: 30px;
+      --radius-tag: 6px;
+      --radius-banner: 18px;
+      --shadow-default: 0 4px 14px rgba(0, 0, 0, 0.04);
+      --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.08);
+      --font-base: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+      --transition: 0.2s ease;
+      --announce-height: 40px;
+      --header-height: 68px;
+      --sticky-offset: calc(var(--announce-height) + var(--header-height));
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-padding-top: var(--sticky-offset); }
+    body {
+      font-family: var(--font-base);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+      font-size: 15px;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    ul, ol { list-style: none; }
+    button { font-family: inherit; }
+
+    /* ---------- 吸顶公告条 ---------- */
+    .announce-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1002;
+      height: var(--announce-height);
+      background: var(--color-primary-dark);
+      color: #f0e8e2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      padding: 0 16px;
+      font-size: 13px;
+      letter-spacing: 0.3px;
+      overflow: hidden;
+      flex-wrap: wrap;
+    }
+    .announce-bar .announce-brand {
+      font-weight: 600;
+      color: #fff;
+      white-space: nowrap;
+    }
+    .announce-bar .announce-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .announce-bar .announce-tag {
+      background: rgba(255, 255, 255, 0.18);
+      border-radius: 4px;
+      padding: 1px 8px;
+      font-size: 12px;
+    }
+
+    /* ---------- 吸顶页头 ---------- */
+    .site-header {
+      position: sticky;
+      top: var(--announce-height);
+      z-index: 1001;
+      height: var(--header-height);
+      background: rgba(250, 247, 244, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      padding: 0 32px;
+    }
+    .header-inner {
+      max-width: 1380px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 19px;
+      color: var(--color-primary-dark);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .logo svg { width: 32px; height: 32px; flex-shrink: 0; }
+    .main-nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .main-nav a {
+      padding: 6px 14px;
+      border-radius: var(--radius-btn);
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      transition: background var(--transition), color var(--transition);
+      white-space: nowrap;
+    }
+    .main-nav a:hover,
+    .main-nav a:focus-visible {
+      background: var(--color-primary-light);
+      color: #fff;
+      outline: none;
+    }
+    .header-search {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .header-search input {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-btn);
+      padding: 7px 16px;
+      font-size: 13px;
+      width: 180px;
+      background: var(--color-surface);
+      color: var(--color-text);
+      transition: border var(--transition);
+    }
+    .header-search input:focus {
+      outline: 2px solid var(--color-primary-light);
+      border-color: transparent;
+    }
+    .header-search button {
+      background: var(--color-primary);
+      border: none;
+      color: #fff;
+      padding: 7px 16px;
+      border-radius: var(--radius-btn);
+      font-size: 13px;
+      cursor: pointer;
+      transition: background var(--transition);
+    }
+    .header-search button:hover { background: var(--color-primary-dark); }
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      margin-left: auto;
+      color: var(--color-text);
+    }
+    .hamburger svg { width: 26px; height: 26px; }
+
+    /* ---------- 主布局（三栏门户） ---------- */
+    .page-container {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 28px 32px 60px;
+      display: grid;
+      grid-template-columns: 175px minmax(0, 1fr) 240px;
+      gap: 36px;
+      align-items: start;
+    }
+    .left-channel {
+      position: sticky;
+      top: var(--sticky-offset);
+      padding-top: 6px;
+    }
+    .left-channel h3 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-text-muted);
+      margin-bottom: 12px;
+      padding-left: 8px;
+    }
+    .channel-list li a {
+      display: block;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      transition: background var(--transition), color var(--transition);
+      border-left: 3px solid transparent;
+    }
+    .channel-list li a:hover,
+    .channel-list li a:focus-visible {
+      background: var(--color-surface);
+      color: var(--color-primary-dark);
+      border-left-color: var(--color-primary);
+      outline: none;
+    }
+    .channel-list li a.active {
+      background: var(--color-surface);
+      color: var(--color-primary-dark);
+      font-weight: 600;
+      border-left-color: var(--color-primary);
+    }
+
+    /* ---------- 主内容区 ---------- */
+    .main-content { min-width: 0; }
+
+    /* 首屏 */
+    .hero {
+      background: linear-gradient(135deg, #f5ede6 0%, #faf7f4 60%, #f0e4db 100%);
+      border-radius: var(--radius-banner);
+      padding: 48px 44px;
+      margin-bottom: 44px;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: -60px;
+      bottom: -80px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(139, 90, 75, 0.12) 0%, transparent 70%);
+      z-index: -1;
+    }
+    .hero h1 {
+      font-size: 2.3rem;
+      line-height: 1.25;
+      color: var(--color-primary-dark);
+      margin-bottom: 16px;
+      max-width: 700px;
+    }
+    .hero .hero-desc {
+      font-size: 16px;
+      color: var(--color-text-secondary);
+      max-width: 640px;
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+    .btn-primary {
+      background: var(--color-primary);
+      color: #fff;
+      padding: 10px 28px;
+      border-radius: var(--radius-btn);
+      font-size: 15px;
+      font-weight: 500;
+      transition: background var(--transition), box-shadow var(--transition);
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--color-primary-dark); box-shadow: var(--shadow-hover); }
+    .hero-stats {
+      display: flex;
+      gap: 28px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+    .hero-stats span {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hero-stats strong { color: var(--color-primary-dark); font-size: 17px; }
+
+    /* 板块通用 */
+    .section {
+      margin-bottom: 48px;
+    }
+    .section h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      margin-bottom: 6px;
+      letter-spacing: 0.3px;
+    }
+    .section .section-sub {
+      font-size: 14px;
+      color: var(--color-text-muted);
+      margin-bottom: 22px;
+    }
+
+    /* 精选卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+      transition: box-shadow var(--transition), transform var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+    }
+    .card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      background: #e8dfd8;
+    }
+    .card-body {
+      padding: 14px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+    .card-body .type-tag {
+      font-size: 11px;
+      background: #f0e4db;
+      color: var(--color-primary-dark);
+      border-radius: var(--radius-tag);
+      padding: 2px 8px;
+      align-self: flex-start;
+      font-weight: 600;
+    }
+    .card-body h3 {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--color-text);
+    }
+    .card-body .card-desc {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+      flex: 1;
+    }
+    .card-meta {
+      display: flex;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--color-text-muted);
+      margin-top: 4px;
+      flex-wrap: wrap;
+    }
+    .card-meta .hot { color: var(--color-primary); font-weight: 600; }
+
+    /* 最新更新列表 */
+    .update-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 6px 0;
+    }
+    .update-item {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      padding: 12px 22px;
+      border-bottom: 1px solid var(--color-border);
+      transition: background var(--transition);
+    }
+    .update-item:last-child { border-bottom: none; }
+    .update-item:hover { background: #fcf9f6; }
+    .update-item .update-time {
+      font-size: 12px;
+      color: var(--color-text-muted);
+      min-width: 72px;
+      flex-shrink: 0;
+    }
+    .update-item .update-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--color-primary-dark);
+    }
+    .update-item .update-summary {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      flex: 1;
+      min-width: 0;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 12px;
+    }
+    .category-item {
+      background: var(--color-surface);
+      border-radius: 12px;
+      padding: 16px 18px;
+      box-shadow: var(--shadow-default);
+      transition: box-shadow var(--transition), background var(--transition);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      border: 1px solid transparent;
+    }
+    .category-item:hover {
+      box-shadow: var(--shadow-hover);
+      border-color: var(--color-primary-light);
+      background: #fffdfb;
+    }
+    .category-item strong { font-size: 15px; color: var(--color-primary-dark); }
+    .category-item span { font-size: 12px; color: var(--color-text-muted); }
+
+    /* 深度解析 */
+    .deep-dive {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 32px 36px;
+      box-shadow: var(--shadow-default);
+    }
+    .deep-dive h3 {
+      font-size: 1.15rem;
+      color: var(--color-primary-dark);
+      margin: 26px 0 10px;
+      letter-spacing: 0.2px;
+    }
+    .deep-dive h3:first-child { margin-top: 0; }
+    .deep-dive p {
+      margin-bottom: 14px;
+      color: var(--color-text);
+      line-height: 1.75;
+    }
+    .deep-dive ul {
+      padding-left: 22px;
+      margin-bottom: 16px;
+      list-style: disc;
+    }
+    .deep-dive li {
+      margin-bottom: 6px;
+      color: var(--color-text-secondary);
+    }
+
+    /* 体验指南 */
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      counter-reset: step;
+    }
+    .guide-step {
+      background: var(--color-surface);
+      border-radius: 12px;
+      padding: 18px 22px 18px 60px;
+      position: relative;
+      box-shadow: var(--shadow-default);
+      counter-increment: step;
+    }
+    .guide-step::before {
+      content: counter(step);
+      position: absolute;
+      left: 20px;
+      top: 18px;
+      width: 28px;
+      height: 28px;
+      background: var(--color-primary-light);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .guide-step strong { display: block; font-size: 15px; margin-bottom: 4px; color: var(--color-primary-dark); }
+    .guide-step p { font-size: 14px; color: var(--color-text-secondary); }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 8px; }
+    .faq-item {
+      background: var(--color-surface);
+      border-radius: 10px;
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+    }
+    .faq-item summary {
+      padding: 16px 20px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--color-primary-dark);
+      transition: background var(--transition);
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 18px;
+      color: var(--color-text-muted);
+      transition: transform var(--transition);
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item summary:hover { background: #fcf9f6; }
+    .faq-item .faq-answer {
+      padding: 0 20px 18px;
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+
+    /* 评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 14px;
+    }
+    .comment-card {
+      background: var(--color-surface);
+      border-radius: 10px;
+      padding: 14px 16px;
+      box-shadow: var(--shadow-default);
+      font-size: 13px;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .comment-card .comment-author {
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      font-size: 13px;
+    }
+    .comment-card .comment-text { color: var(--color-text-secondary); }
+
+    /* 相关资讯 */
+    .news-list { display: flex; flex-direction: column; gap: 14px; }
+    .news-item {
+      background: var(--color-surface);
+      border-radius: 10px;
+      padding: 16px 20px;
+      box-shadow: var(--shadow-default);
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .news-date {
+      font-size: 12px;
+      color: var(--color-text-muted);
+      min-width: 72px;
+      flex-shrink: 0;
+    }
+    .news-body { flex: 1; min-width: 0; }
+    .news-body h4 { font-size: 15px; font-weight: 600; color: var(--color-text); margin-bottom: 4px; }
+    .news-body p { font-size: 13px; color: var(--color-text-secondary); }
+
+    /* 相关推荐标签 */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tag-cloud a {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-btn);
+      padding: 7px 18px;
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      transition: background var(--transition), border-color var(--transition), color var(--transition);
+    }
+    .tag-cloud a:hover {
+      background: var(--color-primary-light);
+      border-color: var(--color-primary-light);
+      color: #fff;
+    }
+
+    /* 补充板块：热门榜单 */
+    .rank-list {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 6px 0;
+    }
+    .rank-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 22px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .rank-item:last-child { border-bottom: none; }
+    .rank-num {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--color-primary-light);
+      min-width: 24px;
+    }
+    .rank-item:nth-child(1) .rank-num { color: var(--color-primary); }
+    .rank-title { font-weight: 600; font-size: 14px; color: var(--color-text); flex: 1; }
+    .rank-meta { font-size: 12px; color: var(--color-text-muted); }
+
+    /* 右侧辅助栏 */
+    .right-aside {
+      position: sticky;
+      top: var(--sticky-offset);
+      padding-top: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .aside-block {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-default);
+    }
+    .aside-block h4 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-text-muted);
+      margin-bottom: 12px;
+    }
+    .aside-list li {
+      padding: 7px 0;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+    .aside-list li:last-child { border-bottom: none; }
+    .aside-list .aside-name { color: var(--color-text-secondary); flex: 1; }
+    .aside-list .aside-badge { font-size: 11px; color: var(--color-primary); font-weight: 600; }
+
+    /* 页尾 */
+    .site-footer {
+      background: var(--color-primary-dark);
+      color: #e8ddd6;
+      padding: 48px 32px 28px;
+      margin-top: 20px;
+    }
+    .footer-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+    .footer-brand .logo { color: #fff; margin-bottom: 14px; }
+    .footer-brand p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #cbb8ad;
+      max-width: 320px;
+    }
+    .footer-col h5 {
+      font-size: 14px;
+      color: #fff;
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 13px;
+      color: #cbb8ad;
+      margin-bottom: 8px;
+      transition: color var(--transition);
+    }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom {
+      max-width: 1380px;
+      margin: 36px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 12px;
+      color: #a89082;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* 回到顶部 */
+    .back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: #fff;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: var(--shadow-hover);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--transition), visibility var(--transition), background var(--transition);
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .back-to-top.visible { opacity: 1; visibility: visible; }
+    .back-to-top:hover { background: var(--color-primary-dark); }
+
+    /* 移动端菜单遮罩 */
+    .menu-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      backdrop-filter: blur(2px);
+    }
+    .menu-overlay.active { display: block; }
+
+    /* ---------- 响应式 ---------- */
+    @media (max-width: 1200px) {
+      .page-container {
+        grid-template-columns: 160px minmax(0, 1fr) 220px;
+        gap: 24px;
+        padding: 24px 20px 50px;
+      }
+    }
+    @media (max-width: 1024px) {
+      .page-container {
+        grid-template-columns: minmax(0, 1fr) 240px;
+      }
+      .left-channel { display: none; }
+      .main-nav { display: none; }
+      .hamburger { display: flex; }
+      .site-header { padding: 0 20px; }
+      .header-search input { width: 140px; }
+    }
+    @media (max-width: 740px) {
+      :root { --announce-height: 36px; --header-height: 60px; }
+      .page-container {
+        grid-template-columns: 1fr;
+        padding: 16px 14px 40px;
+        gap: 28px;
+      }
+      .right-aside {
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .hero { padding: 28px 20px; }
+      .hero h1 { font-size: 1.6rem; }
+      .hero .hero-desc { font-size: 14px; }
+      .card-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .card img { height: 110px; }
+      .update-item { flex-wrap: wrap; padding: 10px 16px; }
+      .update-item .update-summary { flex-basis: 100%; }
+      .deep-dive { padding: 20px 18px; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .header-search { display: none; }
+      .announce-bar { font-size: 11px; gap: 10px; padding: 0 10px; }
+      .comment-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .card-grid { grid-template-columns: 1fr; }
+      .right-aside { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+
+    /* 焦点可见 */
+    :focus-visible {
+      outline: 2px solid var(--color-primary-light);
+      outline-offset: 2px;
+    }
+    /* 减少动效 */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="announce-bar">
+    <span class="announce-brand">善良的小姨子 韩剧 中文字幕</span>
+    <span class="announce-item"><span class="announce-tag">11月7日</span> 第8集中文字幕已更新</span>
+    <span class="announce-item"><span class="announce-tag">11月6日</span> 新增人物关系梳理专题</span>
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a href="/#top" class="logo" aria-label="善良的小姨子 韩剧 中文字幕 首页">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="2"/>
+          <path d="M10 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="16" cy="11" r="2.5" fill="currentColor"/>
+        </svg>
+        善良的小姨子 韩剧 中文字幕
+      </a>
+      <nav class="main-nav" aria-label="主题导航">
+        <a href="/#featured">精选剧集</a>
+        <a href="/#updates">最新更新</a>
+        <a href="/#categories">分类入口</a>
+        <a href="/#deepdive">深度解析</a>
+        <a href="/#guide">观看指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#comments">观众评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#rank">热门榜单</a>
+        <a href="/#submit">投稿交流</a>
+      </nav>
+      <div class="header-search" role="search">
+        <input type="search" id="site-search" placeholder="搜索剧集名或类型…" aria-label="搜索站内剧集">
+        <button id="search-btn" type="button">查找</button>
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="打开菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- 移动端遮罩 -->
+  <div class="menu-overlay" id="menu-overlay"></div>
+
+  <!-- 页面主体 -->
+  <div class="page-container">
+
+    <!-- 左频道索引 -->
+    <aside class="left-channel" aria-label="频道索引">
+      <h3>频道</h3>
+      <ul class="channel-list">
+        <li><a href="/#featured" class="active">精选剧集</a></li>
+        <li><a href="/#updates">分集更新</a></li>
+        <li><a href="/#categories">类型分类</a></li>
+        <li><a href="/#deepdive">深度解析</a></li>
+        <li><a href="/#guide">观看指南</a></li>
+        <li><a href="/#faq">常见问答</a></li>
+        <li><a href="/#comments">观众评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#recommend">相关推荐</a></li>
+        <li><a href="/#rank">热门榜单</a></li>
+        <li><a href="/#submit">投稿交流</a></li>
+      </ul>
+    </aside>
+
+    <!-- 中主内容区 -->
+    <main class="main-content">
+
+      <!-- 首屏 -->
+      <section class="hero" id="hero">
+        <h1>善良的小姨子 韩剧 中文字幕</h1>
+        <p class="hero-desc">
+          聚焦家庭伦理剧《善良的小姨子》全集中文字幕，收录分集看点、演员访谈、人物关系梳理与字幕更新动态。同时聚合同类型“小姨子”系列韩剧的字幕版本对比与观众讨论，方便按题材和演员快速定位想看的内容。
+        </p>
+        <div class="hero-actions">
+          <a href="/#featured" class="btn-primary">浏览精选剧集</a>
+          <a href="/#updates" class="btn-primary" style="background:var(--color-surface);color:var(--color-primary-dark);border:1px solid var(--color-border);">查看最新更新</a>
+        </div>
+        <div class="hero-stats">
+          <span>收录剧集 <strong>36</strong> 部</span>
+          <span>中文字幕条目 <strong>128</strong> 条</span>
+          <span>最近更新 <strong>11月7日</strong></span>
+        </div>
+      </section>
+
+      <!-- 1. 主题领域概览 -->
+      <section class="section" id="overview">
+        <h2>家庭伦理剧与中文字幕生态</h2>
+        <p class="section-sub">了解这个类型的内容构成与当前值得关注的方向</p>
+        <div class="deep-dive" style="padding:24px 28px;">
+          <p>韩国家庭伦理剧在中文观众圈层中一直有稳定的受众，其中以“小姨子”为叙事核心的作品往往围绕姻亲关系、财产分配与代际冲突展开。《善良的小姨子》属于这一脉络中偏向温情化解的版本，2026年10月上线流媒体后，中文字幕由两支民间字幕组几乎同步跟进，更新节奏为每周四、周日各一集。</p>
+          <p>从内容方向看，当前可以关注三类具体内容：一是主线剧集的逐集字幕（已更新至第8集，共16集）；二是角色关系图谱与关键情节的剧评分析；三是同题材横向对比，例如《善良的小姨子》与《我的小姨子》《小姨子的诱惑》在人物设定和冲突强度上的差异。字幕版本方面，目前流传较广的有“凤凰天使”精简版和“韩迷”双语注释版，后者在俚语和敬语处理上更细致，但发布时间通常晚6—10小时。</p>
+          <p>观众决策时比较在意的具体点包括：字幕是否匹配蓝光片源、是否保留拟声词注释、时间轴偏移量。这些细节在条目页均有标注，方便按需选择。</p>
+        </div>
+      </section>
+
+      <!-- 2. 精选内容推荐 -->
+      <section class="section" id="featured">
+        <h2>精选剧集与字幕版本</h2>
+        <p class="section-sub">按条目名称、类型和看点整理，点击可查看更新状态</p>
+        <div class="card-grid">
+          <article class="card">
+            <img src="https://picsum.photos/seed/seonhan8/400/300" alt="善良的小姨子 第8集 家庭聚餐场景剧照" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="type-tag">家庭伦理</span>
+              <h3>善良的小姨子 第8集</h3>
+              <p class="card-desc">姐姐发现丈夫与小姨子私下见面，冲突在家庭聚餐上爆发。本集字幕含敬语转换注释。</p>
+              <div class="card-meta"><span class="hot">热度 9.2</span><span>更新 11月7日</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/seonhan1/400/300" alt="善良的小姨子 第1集 开头场景剧照" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="type-tag">家庭伦理</span>
+              <h3>善良的小姨子 第1集</h3>
+              <p class="card-desc">小姨子搬入姐姐家照顾孩子，姐夫的态度埋下第一道伏笔。开篇节奏偏慢，适合补看。</p>
+              <div class="card-meta"><span class="hot">热度 8.7</span><span>更新 10月12日</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/myseon/400/300" alt="我的小姨子 海报风格剧照" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="type-tag">同题材对比</span>
+              <h3>我的小姨子（2019）</h3>
+              <p class="card-desc">更偏喜剧处理的旧版，小姨子角色设定为咖啡店老板。中文字幕由韩迷组完成，含双语。</p>
+              <div class="card-meta"><span class="hot">热度 7.9</span><span>评分 7.4</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/commentary/400/300" alt="人物关系图谱示意" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="type-tag">剧评分析</span>
+              <h3>善良的小姨子 人物关系图谱</h3>
+              <p class="card-desc">梳理姐姐、姐夫、小姨子与婆婆四条线索，标注第8集后新增的财产公证情节。</p>
+              <div class="card-meta"><span class="hot">热度 8.1</span><span>更新 11月6日</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/seonhan5/400/300" alt="善良的小姨子 第5集 关键对话剧照" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="type-tag">分集看点</span>
+              <h3>善良的小姨子 第5集</h3>
+              <p class="card-desc">小姨子与姐夫在超市偶遇的戏份，台词密度高，双语字幕保留韩语原句对照。</p>
+              <div class="card-meta"><span class="hot">热度 8.5</span><span>更新 10月26日</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/temptation/400/300" alt="小姨子的诱惑 剧照" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="type-tag">同类型</span>
+              <h3>小姨子的诱惑（2021）</h3>
+              <p class="card-desc">冲突强度更高的版本，偏向悬疑化处理。凤凰天使字幕版时间轴匹配25fps片源。</p>
+              <div class="card-meta"><span class="hot">热度 7.2</span><span>评分 6.8</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/actor/400/300" alt="主演访谈截图" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="type-tag">访谈</span>
+              <h3>主演谈“善良”的表演尺度</h3>
+              <p class="card-desc">饰演小姨子的演员在10月30日采访中解释为何刻意减少煽情戏份，涉及第7集哭戏的处理。</p>
+              <div class="card-meta"><span class="hot">热度 7.6</span><span>更新 10月30日</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/subtitle/400/300" alt="字幕组工作界面示意" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="type-tag">字幕版本</span>
+              <h3>凤凰天使 vs 韩迷字幕对比</h3>
+              <p class="card-desc">同一集两个版本的敬语翻译差异清单：外婆称呼、公司职衔、酒桌用语共11处不同。</p>
+              <div class="card-meta"><span class="hot">热度 7.8</span><span>更新 11月4日</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/seonhan12/400/300" alt="善良的小姨子 第12集 预告画面" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="type-tag">预告</span>
+              <h3>善良的小姨子 第9-10集预告</h3>
+              <p class="card-desc">11月5日释出的下集预告，小姨子决定搬出姐姐家，字幕已同步译制。</p>
+              <div class="card-meta"><span class="hot">热度 8.9</span><span>更新 11月5日</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. 最新更新 / 动态 -->
+      <section class="section" id="updates">
+        <h2>分集字幕更新动态</h2>
+        <p class="section-sub">按时间倒序，记录字幕发布与片源匹配情况</p>
+        <div class="update-list">
+          <div class="update-item"><span class="update-time">11月7日</span><span class="update-title">第8集 凤凰天使版</span><span class="update-summary">匹配1080p WEB-DL片源，时间轴偏移0.2秒，含敬语注释。</span></div>
+          <div class="update-item"><span class="update-time">11月6日</span><span class="update-title">第8集 韩迷双语版</span><span class="update-summary">增加韩语原句对照，俚语部分加译注，文件体积较大。</span></div>
+          <div class="update-item"><span class="update-time">11月5日</span><span class="update-title">第9-10集预告字幕</span><span class="update-summary">预告片字幕由凤凰天使发布，含两处拟声词注释。</span></div>
+          <div class="update-item"><span class="update-time">11月4日</span><span class="update-title">第7集 修复版</span><span class="update-summary">修正上一版第18分钟处的时间轴错位，重新压制。</span></div>
+          <div class="update-item"><span class="update-time">11月2日</span><span class="update-title">第7集 双版本</span><span class="update-summary">凤凰天使与韩迷同步发布，韩迷版晚6小时，增加文化注释。</span></div>
+          <div class="update-item"><span class="update-time">10月30日</span><span class="update-title">第6集 字幕</span><span class="update-summary">匹配蓝光片源，修正前五集遗留的称呼不一致问题。</span></div>
+          <div class="update-item"><span class="update-time">10月27日</span><span class="update-title">第5集 韩迷注释版</span><span class="update-summary">超市戏份中出现的品牌名保留韩文并加注中文说明。</span></div>
+          <div class="update-item"><span class="update-time">10月24日</span><span class="update-title">第4集 修复</span><span class="update-summary">解决字幕与片源帧率不匹配导致的末尾提前消失。</span></div>
+          <div class="update-item"><span class="update-time">10月21日</span><span class="update-title">第3集 字幕</span><span class="update-summary">凤凰天使版发布，片源为720p，建议等待1080p版本。</span></div>
+          <div class="update-item"><span class="update-time">10月18日</span><span class="update-title">第2集 双语版</span><span class="update-summary">韩迷组发布双语，含酒桌敬语场景的详细注释。</span></div>
+        </div>
+      </section>
+
+      <!-- 4. 分类入口 -->
+      <section class="section" id="categories">
+        <h2>按类型与需求分类</h2>
+        <p class="section-sub">直接对应搜索词与内容属性</p>
+        <div class="category-grid">
+          <a href="/#featured" class="category-item"><strong>家庭伦理剧</strong><span>姻亲冲突与代际关系</span></a>
+          <a href="/#featured" class="category-item"><strong>小姨子题材</strong><span>同角色设定的系列作品</span></a>
+          <a href="/#featured" class="category-item"><strong>中文字幕资源</strong><span>凤凰天使/韩迷版本</span></a>
+          <a href="/#featured" class="category-item"><strong>分集看点</strong><span>逐集剧情与字幕注释</span></a>
+          <a href="/#deepdive" class="category-item"><strong>人物关系分析</strong><span>姐姐/姐夫/小姨子线索</span></a>
+          <a href="/#deepdive" class="category-item"><strong>同题材对比</strong><span>不同版本冲突强度与结局</span></a>
+          <a href="/#guide" class="category-item"><strong>字幕版本选择</strong><span>片源匹配与时间轴说明</span></a>
+          <a href="/#comments" class="category-item"><strong>观众短评</strong><span>真实观感与槽点</span></a>
+        </div>
+      </section>
+
+      <!-- 5. 深度解析正文 -->
+      <section class="section" id="deepdive">
+        <h2>“小姨子”叙事的类型分化与字幕阅读体验</h2>
+        <p class="section-sub">基于已公开的剧集信息与字幕版本差异展开</p>
+        <div class="deep-dive">
+          <h3>温情版与冲突版的分野</h3>
+          <p>《善良的小姨子》在2026年10月上线时定位为“治愈系家庭剧”，但前八集已经出现三次财产公证和一次离家出走。与2019年《我的小姨子》相比，后者的冲突集中在咖啡馆经营权的争夺，而前者把矛头指向了姐夫与岳母之间的借款协议。具体到第7集第32分钟，小姨子拿出记账本要求姐夫签字，这一情节在《小姨子的诱惑》中对应的是第9集的保险箱钥匙争夺。同样是小姨子主动出击，温情版的处理方式是“用账本讲道理”，冲突版则是“用钥匙卡住命脉”。</p>
+          <p>字幕阅读的差异也在这里显现。凤凰天使版把“장부”译成“账本”，韩迷版译成“记账簿”并加注“韩国小商户常用手写收支簿”。两个版本在交易场景的用词上出现分歧，对理解小姨子的行事逻辑有直接影响——账本偏重家庭记账，记账簿则暗示她做过小生意。这个细节在观众讨论中被反复提及。</p>
+          <h3>字幕版本的可核对差异</h3>
+          <p>以第8集为例，两个版本在以下三处存在可核对的差异：</p>
+          <ul>
+            <li>外婆称呼：凤凰天使统一为“外婆”，韩迷版根据语境区分“外祖母”和“外婆”，饭桌场景用“外祖母”。</li>
+            <li>公司职衔：姐夫的上司被称为“专务”还是“常务”，凤凰天使取“专务”，韩迷版保留“常务”并在注释中说明韩国职级。</li>
+            <li>酒桌用语：小姨子敬酒时的“한 잔 받으세요”凤凰天使译“请喝一杯”，韩迷版译“请您赏脸喝一杯”，后者更贴近韩语敬语语气。</li>
+          </ul>
+          <p>这些差异影响的不只是阅读流畅度。对想研究韩语敬语体系的观众，韩迷版提供了可对照的原文；对只想快速追剧的观众，凤凰天使版更简洁。</p>
+          <h3>分集节奏与字幕发布速度</h3>
+          <p>本剧每周四、周日更新，字幕组发布时间差可以直接量化。第8集（11月7日更新）凤凰天使版在播出后7小时发布，韩迷版在13小时后发布。第7集（11月2日更新）的差距更大：凤凰天使版5小时内发布，韩迷版因增加文化注释延迟至11小时。速度差距主要来自三个环节：片源获取时间、翻译分工数量、校对轮次。凤凰天使在片源释放后1小时内完成分配，韩迷组需要额外一轮文化注释审核。</p>
+          <p>这个时间差对追剧体验有实际影响。周四晚上想第一时间看剧的观众只能等凤凰天使版，而韩迷版通常要到第二天上午。第8集播出当晚，相关讨论帖中“等韩迷”和“先看凤凰”的回复比例约为1:3。</p>
+          <h3>同题材观众的实际选择</h3>
+          <p>《善良的小姨子》目前豆瓣标记人数约1200人，短评中“温情”“失望”“姐姐演技”是高频词。与《我的小姨子》的标记人数（约8600人）相比，新剧的讨论量还很小。但这不意味着质量差距——两部剧的评分分别是7.4和7.1，接近。选择哪部看，更多取决于观众对冲突强度的偏好：想看激烈对峙的直接跳到《小姨子的诱惑》，想看日常摩擦的可以从《善良的小姨子》第3集开始。</p>
+        </div>
+      </section>
+
+      <!-- 6. 体验指南 / 消费路径 -->
+      <section class="section" id="guide">
+        <h2>按需求选择剧集与字幕版本</h2>
+        <p class="section-sub">从观看顺序到字幕取舍的参考路径</p>
+        <div class="guide-steps">
+          <div class="guide-step">
+            <strong>先确认片源分辨率</strong>
+            <p>《善良的小姨子》目前流传的片源有720p和1080p两种。凤凰天使版第3集仅匹配720p，第8集匹配1080p。如果手头是1080p片源，直接找最新发布的字幕文件，避免时间轴错位。</p>
+          </div>
+          <div class="guide-step">
+            <strong>根据韩语水平选字幕版本</strong>
+            <p>完全依赖中文的选凤凰天使版，翻译更紧凑；想对照韩语原文或了解敬语用法的选韩迷双语版，注释较多但阅读节奏稍慢。</p>
+          </div>
+          <div class="guide-step">
+            <strong>从第5集开始判断是否入坑</strong>
+            <p>第1—4集主要铺垫人物关系，冲突较少。第5集超市偶遇戏是第一个情节点，看完这一集基本能判断是否接受本剧的叙事节奏。如果觉得太温吞，可以直接看《小姨子的诱惑》第9集。</p>
+          </div>
+          <div class="guide-step">
+            <strong>同题材横向比较的维度</strong>
+            <p>比较“小姨子”系列时，重点看三个维度：小姨子的职业设定（学生/咖啡店老板/公司职员）、姐夫的态度转变节点、财产纠纷的具体形式。这些在条目页均有标注。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. FAQ -->
+      <section class="section" id="faq">
+        <h2>常见问答</h2>
+        <p class="section-sub">关于剧集与字幕的高频问题</p>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>《善良的小姨子》一共多少集？</summary>
+            <div class="faq-answer">全16集，每周四、周日各更新一集。截至2026年11月8日已播出8集，预计12月中旬完结。</div>
+          </details>
+          <details class="faq-item">
+            <summary>凤凰天使和韩迷的字幕哪个更准确？</summary>
+            <div class="faq-answer">两个版本在核心情节上一致，差异主要在敬语和文化注释。韩迷版保留更多韩语原句对照，凤凰天使版更简洁。第8集“专务/常务”的翻译差异需要留意，不影响主线理解。</div>
+          </details>
+          <details class="faq-item">
+            <summary>为什么第3集只有720p字幕？</summary>
+            <div class="faq-answer">第3集播出时1080p片源释放延迟，凤凰天使先匹配720p发布。11月4日已补发1080p时间轴修正版，可在更新动态中查看。</div>
+          </details>
+          <details class="faq-item">
+            <summary>《善良的小姨子》和《我的小姨子》是同一个编剧吗？</summary>
+            <div class="faq-answer">不是。前者编剧为金敏贞（音译），后者编剧为朴英美。两部剧的导演也不同，但同属一家制作公司的家庭剧线。</div>
+          </details>
+          <details class="faq-item">
+            <summary>第8集结尾小姨子搬走了吗？</summary>
+            <div class="faq-answer">第8集结尾小姨子收拾行李，但第9-10集预告显示她暂住朋友家，并未完全离开。具体去向在11月9日更新的第9集中揭晓。</div>
+          </details>
+          <details class="faq-item">
+            <summary>哪里可以看到带中文字幕的完整剧集？</summary>
+            <div class="faq-answer">本页不提供在线播放，仅聚合字幕版本信息与更新动态。观众可依据条目页标注的片源参数在常用字幕站查找对应文件。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8. 用户评论 -->
+      <section class="section" id="comments">
+        <h2>观众短评</h2>
+        <p class="section-sub">来自剧集讨论区的真实语气摘录</p>
+        <div class="comment-grid">
+          <div class="comment-card"><span class="comment-author">泡菜汤饭</span><p class="comment-text">第8集饭桌那场戏，姐姐的台词太密了，字幕差点跟不上。凤凰版翻得还行。</p></div>
+          <div class="comment-card"><span class="comment-author">南山塔下</span><p class="comment-text">韩迷的双语版看着累但确实细，外婆那个称呼的注释我给满分。</p></div>
+          <div class="comment-card"><span class="comment-author">追剧小张</span><p class="comment-text">说实话前四集差点弃了，第五集超市那段才有点意思。</p></div>
+          <div class="comment-card"><span class="comment-author">明洞扫街</span><p class="comment-text">姐夫那个演员是不是演过《我的小姨子》里的同事？脸熟。</p></div>
+          <div class="comment-card"><span class="comment-author">橘子汽水</span><p class="comment-text">第7集哭戏我快进了，不是演得不好，是音乐太满。</p></div>
+          <div class="comment-card"><span class="comment-author">字幕组观察</span><p class="comment-text">凤凰天使最近几集速度确实快，但第3集720p那个事还是有点膈应。</p></div>
+          <div class="comment-card"><span class="comment-author">不想熬夜</span><p class="comment-text">等韩迷版等到第二天，追剧体验打折扣。不过质量确实稳。</p></div>
+          <div class="comment-card"><span class="comment-author">家庭剧老粉</span><p class="comment-text">这剧的冲突太轻了，跟《小姨子的诱惑》比像过家家。</p></div>
+          <div class="comment-card"><span class="comment-author">片源党</span><p class="comment-text">1080p片源配凤凰第8集字幕，时间轴完美，亲测。</p></div>
+          <div class="comment-card"><span class="comment-author">只看不说话</span><p class="comment-text">姐姐的演技比小姨子好，可惜戏份少了点。</p></div>
+          <div class="comment-card"><span class="comment-author">咖啡续命</span><p class="comment-text">记账本那段我暂停看了两遍，韩语原文写的是가계부，确实是家庭记账簿的意思。</p></div>
+          <div class="comment-card"><span class="comment-author">路人甲</span><p class="comment-text">预告片剪得比正片紧张，正片反而平。</p></div>
+          <div class="comment-card"><span class="comment-author">周末看剧</span><p class="comment-text">希望结局别强行和解，第8集那个架势不像能轻易收场。</p></div>
+          <div class="comment-card"><span class="comment-author">小姨子宇宙</span><p class="comment-text">同题材里《我的小姨子》咖啡店老板人设更有意思，这部太居家了。</p></div>
+          <div class="comment-card"><span class="comment-author">等更中</span><p class="comment-text">11月9日第9集，希望小姨子别真搬走，搬走就没对手戏了。</p></div>
+          <div class="comment-card"><span class="comment-author">辣白菜</span><p class="comment-text">这剧的OST挺好听，有人知道第8集片尾曲叫什么吗？</p></div>
+        </div>
+      </section>
+
+      <!-- 9. 相关资讯 -->
+      <section class="section" id="news">
+        <h2>剧集与字幕动态</h2>
+        <p class="section-sub">近期可核对的公开信息</p>
+        <div class="news-list">
+          <div class="news-item">
+            <span class="news-date">11月7日</span>
+            <div class="news-body">
+              <h4>第8集收视率2.1%，较上周上升0.3个百分点</h4>
+              <p>尼尔森韩国数据，首都圈收视2.1%，全国1.8%。同时段排名第三，前两位均为综艺节目。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">11月5日</span>
+            <div class="news-body">
+              <h4>制作方发布第9-10集文字预告，小姨子暂住朋友家</h4>
+              <p>预告文本提到“行李搬走但钥匙留下”，暗示后续仍有交集。文字预告比视频预告早两天发布。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">11月1日</span>
+            <div class="news-body">
+              <h4>凤凰天使字幕组发布第3集1080p修正版</h4>
+              <p>修正内容为时间轴整体后移0.8秒，并调整片尾字幕字体大小。文件已替换原下载链接。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">10月30日</span>
+            <div class="news-body">
+              <h4>主演金某接受专访，回应“善良”设定争议</h4>
+              <p>采访中表示“小姨子的善良不是软弱，是选择用规则解决问题”。该采访在NAVER娱乐版点击量超过4.2万。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">10月27日</span>
+            <div class="news-body">
+              <h4>韩迷字幕组新增文化注释审核流程</h4>
+              <p>从第5集开始，双语版增加一名韩国文化顾问参与校对，发布时间因此平均延长3小时。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">10月22日</span>
+            <div class="news-body">
+              <h4>《善良的小姨子》与《我的小姨子》编剧归属引发讨论</h4>
+              <p>部分观众误以为两部剧同编剧，制作公司澄清后，相关讨论帖在theqoo浏览量达1.7万次。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. 相关推荐 -->
+      <section class="section" id="recommend">
+        <h2>相关推荐标签</h2>
+        <p class="section-sub">具体内容方向与可搜索条目</p>
+        <div class="tag-cloud">
+          <a href="/#featured">善良的小姨子第8集</a>
+          <a href="/#featured">凤凰天使字幕</a>
+          <a href="/#featured">韩迷双语版</a>
+          <a href="/#deepdive">小姨子题材对比</a>
+          <a href="/#guide">1080p片源匹配</a>
+          <a href="/#news">第9集预告解析</a>
+          <a href="/#comments">姐姐演技讨论</a>
+          <a href="/#rank">家庭伦理剧榜单</a>
+        </div>
+      </section>
+
+      <!-- 11. 补充板块：热门榜单 + 投稿 -->
+      <section class="section" id="rank">
+        <h2>本周热门条目榜</h2>
+        <p class="section-sub">按站内浏览量与讨论热度排序</p>
+        <div class="rank-list">
+          <div class="rank-item"><span class="rank-num">1</span><span class="rank-title">善良的小姨子 第8集 凤凰天使版</span><span class="rank-meta">热度 9.2</span></div>
+          <div class="rank-item"><span class="rank-num">2</span><span class="rank-title">善良的小姨子 第7集 双版本对比</span><span class="rank-meta">热度 8.8</span></div>
+          <div class="rank-item"><span class="rank-num">3</span><span class="rank-title">第9-10集预告 字幕版</span><span class="rank-meta">热度 8.5</span></div>
+          <div class="rank-item"><span class="rank-num">4</span><span class="rank-title">人物关系图谱（第8集后更新）</span><span class="rank-meta">热度 8.1</span></div>
+          <div class="rank-item"><span class="rank-num">5</span><span class="rank-title">小姨子的诱惑 第9集 凤凰版</span><span class="rank-meta">热度 7.9</span></div>
+          <div class="rank-item"><span class="rank-num">6</span><span class="rank-title">主演专访：善良的表演尺度</span><span class="rank-meta">热度 7.6</span></div>
+        </div>
+      </section>
+
+      <!-- 互动板块：投稿交流 -->
+      <section class="section" id="submit">
+        <h2>投稿与交流</h2>
+        <p class="section-sub">分享字幕版本信息与观剧笔记</p>
+        <div class="deep-dive" style="padding:24px 28px;">
+          <p>如果你发现了新的字幕版本或片源匹配信息，可以在讨论区提交条目名称、字幕组名称和发布时间。第8集播出后，已有3位用户反馈凤凰天使版在部分播放器上需要手动调整字幕延迟0.2秒。这类具体信息对后来者很有帮助。</p>
+          <p>投稿时请注明字幕文件的时间轴参数（帧率、分辨率）和校验方式，方便他人核对。关于剧情讨论，欢迎围绕第8集饭桌戏、记账本情节和人物关系走向展开，避免剧透第9集未播内容。</p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右侧辅助栏 -->
+    <aside class="right-aside" aria-label="辅助信息">
+      <div class="aside-block">
+        <h4>最近更新</h4>
+        <ul class="aside-list">
+          <li><span class="aside-name">第8集 凤凰版</span><span class="aside-badge">11/7</span></li>
+          <li><span class="aside-name">第8集 韩迷版</span><span class="aside-badge">11/6</span></li>
+          <li><span class="aside-name">第9-10集预告</span><span class="aside-badge">11/5</span></li>
+          <li><span class="aside-name">第7集 修复版</span><span class="aside-badge">11/4</span></li>
+          <li><span class="aside-name">第3集 1080p修正</span><span class="aside-badge">11/1</span></li>
+        </ul>
+      </div>
+      <div class="aside-block">
+        <h4>热播同题材</h4>
+        <ul class="aside-list">
+          <li><span class="aside-name">我的小姨子</span><span class="aside-badge">7.1分</span></li>
+          <li><span class="aside-name">小姨子的诱惑</span><span class="aside-badge">6.8分</span></li>
+          <li><span class="aside-name">善良的小姨子</span><span class="aside-badge">7.4分</span></li>
+          <li><span class="aside-name">小姨子回来了</span><span class="aside-badge">6.5分</span></li>
+        </ul>
+      </div>
+      <div class="aside-block">
+        <h4>字幕组更新节奏</h4>
+        <ul class="aside-list">
+          <li><span class="aside-name">凤凰天使</span><span class="aside-badge">5-7小时</span></li>
+          <li><span class="aside-name">韩迷双语</span><span class="aside-badge">11-13小时</span></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <!-- 页尾 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/#top" class="logo" style="color:#fff;">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px;">
+            <circle cx="16" cy="16" r="15" stroke="#fff" stroke-width="2"/>
+            <path d="M10 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="16" cy="11" r="2.5" fill="#fff"/>
+          </svg>
+          善良的小姨子 韩剧 中文字幕
+        </a>
+        <p>覆盖2026年10月至12月播出的《善良的小姨子》全16集字幕动态，兼收《我的小姨子》《小姨子的诱惑》等同题材旧作的字幕版本对比。内容类型以分集条目、字幕版本差异清单和观众短评为主，更新节奏跟随剧集播出时间（每周四、周日）。</p>
+      </div>
+      <div class="footer-col">
+        <h5>剧集</h5>
+        <a href="/#featured">精选剧集</a>
+        <a href="/#updates">分集更新</a>
+        <a href="/#rank">热门榜单</a>
+      </div>
+      <div class="footer-col">
+        <h5>解析</h5>
+        <a href="/#deepdive">深度解析</a>
+        <a href="/#guide">观看指南</a>
+        <a href="/#faq">常见问答</a>
+      </div>
+      <div class="footer-col">
+        <h5>互动</h5>
+        <a href="/#comments">观众评论</a>
+        <a href="/#submit">投稿交流</a>
+        <a href="/#news">相关资讯</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>示例页面 · 内容为剧集条目与字幕版本信息聚合，不提供在线播放</span>
+      <span>更新于2026年11月8日</span>
+    </div>
+  </footer>
+
+  <!-- 回到顶部按钮 -->
+  <button class="back-to-top" id="back-to-top" aria-label="回到顶部">↑</button>
+
+  <!-- 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "善良的小姨子 韩剧 中文字幕",
+    "description": "善良的小姨子 韩剧 中文字幕聚合页，提供剧集分集看点、中文字幕更新动态、类型对比解析与观众评论。",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "《善良的小姨子》一共多少集？",
+        "acceptedAnswer": { "@type": "Answer", "text": "全16集，每周四、周日各更新一集。截至2026年11月8日已播出8集。" }
+      },
+      {
+        "@type": "Question",
+        "name": "凤凰天使和韩迷的字幕哪个更准确？",
+        "acceptedAnswer": { "@type": "Answer", "text": "两个版本在核心情节上一致，差异主要在敬语和文化注释。韩迷版保留更多韩语原句对照，凤凰天使版更简洁。" }
+      },
+      {
+        "@type": "Question",
+        "name": "为什么第3集只有720p字幕？",
+        "acceptedAnswer": { "@type": "Answer", "text": "第3集播出时1080p片源释放延迟，凤凰天使先匹配720p发布。11月4日已补发1080p时间轴修正版。" }
+      },
+      {
+        "@type": "Question",
+        "name": "《善良的小姨子》和《我的小姨子》是同一个编剧吗？",
+        "acceptedAnswer": { "@type": "Answer", "text": "不是。前者编剧为金敏贞，后者编剧为朴英美，导演也不同。" }
+      },
+      {
+        "@type": "Question",
+        "name": "第8集结尾小姨子搬走了吗？",
+        "acceptedAnswer": { "@type": "Answer", "text": "第8集结尾小姨子收拾行李，但第9-10集预告显示她暂住朋友家，并未完全离开。" }
+      },
+      {
+        "@type": "Question",
+        "name": "哪里可以看到带中文字幕的完整剧集？",
+        "acceptedAnswer": { "@type": "Answer", "text": "本页不提供在线播放，仅聚合字幕版本信息与更新动态。观众可依据条目页标注的片源参数在常用字幕站查找对应文件。" }
+      }
+    ]
+  }
+  </script>
+
+  <!-- 交互脚本 -->
+  <script>
+    (function() {
+      // 回到顶部
+      const backBtn = document.getElementById('back-to-top');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > window.innerHeight) {
+          backBtn.classList.add('visible');
+        } else {
+          backBtn.classList.remove('visible');
+        }
+      }, { passive: true });
+      backBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // 移动端菜单（通过汉堡按钮控制导航显示，遮罩关闭）
+      const hamburger = document.getElementById('hamburger-btn');
+      const overlay = document.getElementById('menu-overlay');
+      const mainNav = document.querySelector('.main-nav');
+      let navClone = null;
+
+      function openMenu() {
+        if (!navClone) {
+          navClone = mainNav.cloneNode(true);
+          navClone.style.display = 'flex';
+          navClone.style.flexDirection = 'column';
+          navClone.style.position = 'fixed';
+          navClone.style.top = 'calc(var(--announce-height) + var(--header-height))';
+          navClone.style.left = '0';
+          navClone.style.right = '0';
+          navClone.style.background = 'var(--color-bg)';
+          navClone.style.padding = '16px 20px';
+          navClone.style.zIndex = '1003';
+          navClone.style.boxShadow = 'var(--shadow-hover)';
+          navClone.style.gap = '4px';
+          navClone.style.maxHeight = '70vh';
+          navClone.style.overflowY = 'auto';
+          navClone.querySelectorAll('a').forEach(function(link) {
+            link.style.padding = '10px 14px';
+            link.style.borderRadius = '8px';
+            link.style.fontSize = '15px';
+            link.style.color = 'var(--color-text)';
+            link.addEventListener('click', function() {
+              closeMenu();
+            });
+          });
+          document.body.appendChild(navClone);
+        }
+        navClone.style.display = 'flex';
+        overlay.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+      }
+
+      function closeMenu() {
+        if (navClone) navClone.style.display = 'none';
+        overlay.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+
+      hamburger.addEventListener('click', function() {
+        if (navClone && navClone.style.display === 'flex') {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      overlay.addEventListener('click', closeMenu);
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeMenu();
+        }
+      });
+
+      // 搜索功能（本地筛选卡片与列表）
+      const searchInput = document.getElementById('site-search');
+      const searchBtn = document.getElementById('search-btn');
+      function performSearch() {
+        const query = searchInput.value.trim().toLowerCase();
+        const cards = document.querySelectorAll('.card');
+        const updateItems = document.querySelectorAll('.update-item');
+        const newsItems = document.querySelectorAll('.news-item');
+        const allItems = [...cards, ...updateItems, ...newsItems];
+        if (!query) {
+          allItems.forEach(el => el.style.display = '');
+          return;
+        }
+        let found = false;
+        allItems.forEach(el => {
+          if (el.textContent.toLowerCase().includes(query)) {
+            el.style.display = '';
+            found = true;
+          } else {
+            el.style.display = 'none';
+          }
+        });
+        // 无结果反馈（简单处理）
+        let feedback = document.getElementById('search-feedback');
+        if (!feedback) {
+          feedback = document.createElement('p');
+          feedback.id = 'search-feedback';
+          feedback.style.cssText = 'margin-top:12px;color:var(--color-primary);font-size:14px;';
+          document.querySelector('.main-content').prepend(feedback);
+        }
+        if (!found) {
+          feedback.textContent = '没有找到匹配的条目，试试“第8集”“凤凰天使”或“小姨子”。';
+        } else {
+          feedback.textContent = '';
+        }
+      }
+      searchBtn.addEventListener('click', performSearch);
+      searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') performSearch();
+      });
+
+      // 左栏导航高亮（滚动监听简单版）
+      const channelLinks = document.querySelectorAll('.channel-list a');
+      const sections = document.querySelectorAll('.section, .hero');
+      function highlightNav() {
+        let current = '';
+        sections.forEach(sec => {
+          const top = sec.offsetTop - 160;
+          if (window.scrollY >= top) {
+            current = sec.getAttribute('id');
+          }
+        });
+        channelLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '/#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+      window.addEventListener('scroll', highlightNav, { passive: true });
+      highlightNav();
+    })();
+  </script>
+</body>
+                </html>
