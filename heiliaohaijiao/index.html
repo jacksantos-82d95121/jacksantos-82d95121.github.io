@@ -1,0 +1,2107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>黑料海角网 - 社区动态与内容精选</title>
+  <meta name="description" content="黑料海角网汇聚圈内热点爆料、社区争议与当事人回应，提供精选条目、分类索引、深度解析与用户评论，适合关注网络话题与圈内动态的读者浏览。">
+  <meta name="keywords" content="黑料海角网">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%231a1e2c'/%3E%3Cpath d='M28 65 50 22 72 65Z' fill='%23e05a4f'/%3E%3Ccircle cx='50' cy='72' r='7' fill='%23f4c542'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --brand: #c0392b;
+      --brand-light: #e05a4f;
+      --brand-dark: #8e2a20;
+      --bg: #f5f3ef;
+      --panel: #ffffff;
+      --panel-alt: #faf8f4;
+      --ink: #1e1e24;
+      --ink-2: #4a4a55;
+      --ink-3: #7a7a85;
+      --line: #e2ddd5;
+      --line-strong: #c9c2b8;
+      --radius-card: 14px;
+      --radius-btn: 8px;
+      --radius-tag: 5px;
+      --shadow: 0 1px 3px rgba(30,30,36,0.06), 0 4px 12px rgba(30,30,36,0.04);
+      --shadow-hover: 0 3px 8px rgba(30,30,36,0.08), 0 10px 24px rgba(30,30,36,0.07);
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --header-h: 58px;
+      --notice-h: 40px;
+      --offset: calc(var(--header-h) + var(--notice-h) + 12px);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: var(--offset); }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    img { display: block; max-width: 100%; }
+    button { font-family: inherit; cursor: pointer; }
+
+    /* ---------- 吸顶公告条 ---------- */
+    .notice-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--notice-h);
+      background: linear-gradient(90deg, #2a1410 0%, #3d1a14 55%, #2a1410 100%);
+      color: #f0d9c8;
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+      overflow: hidden;
+      border-bottom: 1px solid #4a2018;
+    }
+    .notice-inner {
+      width: 100%;
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .notice-brand {
+      flex-shrink: 0;
+      font-weight: 700;
+      color: #f4c542;
+      font-size: 13px;
+      padding-right: 16px;
+      border-right: 1px solid rgba(244,197,66,0.3);
+      letter-spacing: 0.06em;
+    }
+    .notice-items {
+      display: flex;
+      gap: 28px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .notice-items span { opacity: 0.92; }
+    .notice-items b { color: #f4c542; font-weight: 600; }
+
+    /* ---------- 吸顶页头 ---------- */
+    .site-header {
+      position: sticky;
+      top: var(--notice-h);
+      z-index: 99;
+      height: var(--header-h);
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .header-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      flex-shrink: 0;
+    }
+    .logo-mark { width: 32px; height: 32px; }
+    .logo-text {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    .logo-text em { color: var(--brand); font-style: normal; }
+
+    .main-nav {
+      display: flex;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      flex: 1;
+      min-width: 0;
+    }
+    .main-nav::-webkit-scrollbar { display: none; }
+    .main-nav a {
+      padding: 6px 11px;
+      border-radius: var(--radius-btn);
+      font-size: 13.5px;
+      color: var(--ink-2);
+      white-space: nowrap;
+      transition: background .15s, color .15s;
+    }
+    .main-nav a:hover { background: #f2ece5; color: var(--brand); }
+
+    .header-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: #f2ece5;
+      border: 1px solid transparent;
+      border-radius: 20px;
+      padding: 0 6px 0 12px;
+      height: 34px;
+      transition: border-color .15s, background .15s;
+    }
+    .search-box:focus-within { border-color: var(--brand-light); background: #fff; }
+    .search-box input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 13px;
+      width: 118px;
+      color: var(--ink);
+      font-family: inherit;
+    }
+    .search-box input::placeholder { color: var(--ink-3); }
+    .search-box button {
+      background: var(--brand);
+      color: #fff;
+      border: none;
+      border-radius: 16px;
+      height: 26px;
+      padding: 0 12px;
+      font-size: 12.5px;
+      font-weight: 600;
+    }
+    .btn-ghost {
+      border: 1px solid var(--line-strong);
+      background: #fff;
+      color: var(--ink-2);
+      border-radius: 20px;
+      height: 34px;
+      padding: 0 15px;
+      font-size: 13px;
+      transition: border-color .15s, color .15s, background .15s;
+    }
+    .btn-ghost:hover { border-color: var(--brand); color: var(--brand); background: #fdf6f4; }
+
+    .hamburger {
+      display: none;
+      width: 38px; height: 38px;
+      border: 1px solid var(--line-strong);
+      border-radius: 8px;
+      background: #fff;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .hamburger span { display: block; width: 17px; height: 2px; background: var(--ink-2); border-radius: 2px; transition: transform .2s, opacity .2s; }
+    .hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* ---------- 首屏 ---------- */
+    .hero {
+      position: relative;
+      background: radial-gradient(circle at 82% 30%, #3a1a14 0%, #1a1210 55%, #120d0b 100%);
+      color: #f2eadf;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 15% 80%, rgba(224,90,79,0.18) 0%, transparent 42%),
+        radial-gradient(circle at 90% 15%, rgba(244,197,66,0.10) 0%, transparent 38%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 54px 20px 48px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      letter-spacing: 0.12em;
+      color: #f4c542;
+      border: 1px solid rgba(244,197,66,0.35);
+      border-radius: 20px;
+      padding: 3px 14px;
+      margin-bottom: 18px;
+      background: rgba(244,197,66,0.06);
+    }
+    .hero-badge i { width: 6px; height: 6px; border-radius: 50%; background: #f4c542; display: inline-block; animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+    .hero h1 {
+      font-size: clamp(34px, 4.6vw, 54px);
+      line-height: 1.12;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      margin-bottom: 18px;
+      background: linear-gradient(180deg, #fff 30%, #d8c4b0 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero-desc {
+      font-size: 15.5px;
+      line-height: 1.85;
+      color: #cbb9a9;
+      max-width: 560px;
+      margin-bottom: 26px;
+    }
+    .hero-desc strong { color: #f4c542; font-weight: 600; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn-primary {
+      background: var(--brand);
+      color: #fff;
+      border: none;
+      border-radius: 24px;
+      height: 44px;
+      padding: 0 26px;
+      font-size: 14.5px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      transition: background .18s, transform .18s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--brand-light); transform: translateY(-2px); }
+    .btn-outline-light {
+      border: 1px solid rgba(244,197,66,0.45);
+      color: #f4c542;
+      background: transparent;
+      border-radius: 24px;
+      height: 44px;
+      padding: 0 24px;
+      font-size: 14.5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background .18s, border-color .18s;
+    }
+    .btn-outline-light:hover { background: rgba(244,197,66,0.1); border-color: #f4c542; }
+
+    .hero-visual { position: relative; display: flex; justify-content: center; align-items: center; }
+    .hero-visual svg { width: 100%; max-width: 380px; height: auto; filter: drop-shadow(0 18px 36px rgba(0,0,0,0.45)); }
+    .hero-stats {
+      display: flex;
+      gap: 28px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    .hero-stats div { font-size: 12.5px; color: #a89484; }
+    .hero-stats b { display: block; font-size: 22px; font-weight: 800; color: #f0e3d4; letter-spacing: 0.01em; }
+
+    /* ---------- 主体布局：三栏 ---------- */
+    .layout {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+      display: grid;
+      grid-template-columns: 172px minmax(0, 1fr) 236px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* 左频道索引 */
+    .channel-nav {
+      position: sticky;
+      top: var(--offset);
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--line);
+      padding: 16px 12px;
+      box-shadow: var(--shadow);
+    }
+    .channel-nav h2 {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: var(--ink-3);
+      font-weight: 600;
+      padding: 0 8px 10px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 8px;
+    }
+    .channel-nav a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 9px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      color: var(--ink-2);
+      transition: background .14s, color .14s;
+    }
+    .channel-nav a span.count { font-size: 11px; color: var(--ink-3); background: #f2ece5; border-radius: 10px; padding: 1px 7px; }
+    .channel-nav a:hover, .channel-nav a.active { background: #fdf1ee; color: var(--brand); }
+    .channel-nav a:hover span.count, .channel-nav a.active span.count { background: #f6dcd6; color: var(--brand-dark); }
+
+    /* 主内容 */
+    .main-content { min-width: 0; }
+    .section {
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      padding: 26px 26px 28px;
+      margin-bottom: 26px;
+      scroll-margin-top: var(--offset);
+    }
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .section-head h2 {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      color: var(--ink);
+      position: relative;
+      padding-left: 13px;
+    }
+    .section-head h2::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 5px; bottom: 5px;
+      width: 4px;
+      border-radius: 3px;
+      background: linear-gradient(180deg, var(--brand), var(--brand-light));
+    }
+    .section-head .sub { font-size: 12.5px; color: var(--ink-3); }
+    .section-head .more-link { font-size: 12.5px; color: var(--brand); border-bottom: 1px dashed #e0b8b0; }
+
+    /* 领域概览 */
+    .overview-text { font-size: 14.8px; line-height: 1.9; color: var(--ink-2); }
+    .overview-text p + p { margin-top: 12px; }
+    .overview-text b { color: var(--ink); font-weight: 600; }
+
+    /* 精选卡片 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .content-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--panel);
+      transition: transform .18s, box-shadow .18s, border-color .18s;
+      display: flex;
+      flex-direction: column;
+      scroll-margin-top: var(--offset);
+    }
+    .content-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); border-color: #d8c9c3; }
+    .card-thumb { position: relative; aspect-ratio: 4/3; overflow: hidden; background: #eee; }
+    .card-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+    .content-card:hover .card-thumb img { transform: scale(1.04); }
+    .card-type {
+      position: absolute;
+      top: 9px; left: 9px;
+      background: rgba(26,20,17,0.82);
+      color: #f4c542;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 9px;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+      backdrop-filter: blur(4px);
+    }
+    .card-body { padding: 12px 14px 14px; display: flex; flex-direction: column; flex: 1; }
+    .card-title { font-size: 15px; font-weight: 700; line-height: 1.4; margin-bottom: 6px; color: var(--ink); }
+    .card-desc { font-size: 12.8px; color: var(--ink-2); line-height: 1.65; margin-bottom: 10px; flex: 1; }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+    .tag {
+      font-size: 11px;
+      color: var(--ink-3);
+      background: #f2ece5;
+      border-radius: var(--radius-tag);
+      padding: 1px 7px;
+      white-space: nowrap;
+    }
+    .tag.tag-hot { background: #fdf1ee; color: var(--brand-dark); }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 11.5px;
+      color: var(--ink-3);
+      border-top: 1px solid #f0ebe4;
+      padding-top: 9px;
+    }
+    .card-meta .heat { color: var(--brand); font-weight: 600; }
+
+    /* 动态列表 */
+    .update-list { display: flex; flex-direction: column; }
+    .update-item {
+      display: flex;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px dashed var(--line);
+      align-items: flex-start;
+      scroll-margin-top: var(--offset);
+    }
+    .update-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .update-item:first-child { padding-top: 0; }
+    .update-time {
+      flex-shrink: 0;
+      width: 62px;
+      font-size: 11.5px;
+      color: var(--ink-3);
+      padding-top: 1px;
+      font-variant-numeric: tabular-nums;
+    }
+    .update-time .dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--brand-light); margin-right: 5px; vertical-align: 1px; }
+    .update-main { flex: 1; min-width: 0; }
+    .update-title { font-size: 14.5px; font-weight: 600; color: var(--ink); margin-bottom: 3px; }
+    .update-title a:hover { color: var(--brand); }
+    .update-summary { font-size: 12.8px; color: var(--ink-2); line-height: 1.6; }
+
+    /* 分类入口 */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .cat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      padding: 13px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--panel-alt);
+      transition: background .15s, border-color .15s, transform .15s;
+    }
+    .cat-item:hover { background: #fdf1ee; border-color: #e6c4bc; transform: translateY(-2px); }
+    .cat-item .cat-name { font-size: 14px; font-weight: 700; color: var(--ink); }
+    .cat-item .cat-desc { font-size: 11.5px; color: var(--ink-3); line-height: 1.5; }
+    .cat-item .cat-count { font-size: 11px; color: var(--brand); font-weight: 600; }
+
+    /* 深度解析 */
+    .deep h3 {
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 22px 0 9px;
+      padding-left: 10px;
+      border-left: 3px solid var(--brand-light);
+    }
+    .deep h3:first-of-type { margin-top: 4px; }
+    .deep p { font-size: 14.5px; line-height: 1.9; color: var(--ink-2); margin-bottom: 10px; }
+    .deep ul { margin: 8px 0 12px 0; padding-left: 2px; }
+    .deep li {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--ink-2);
+      padding: 3px 0 3px 18px;
+      position: relative;
+    }
+    .deep li::before {
+      content: "";
+      position: absolute;
+      left: 3px; top: 13px;
+      width: 6px; height: 6px;
+      border-radius: 2px;
+      background: var(--brand-light);
+      opacity: 0.7;
+    }
+    .deep-quote {
+      border-left: 3px solid #e6c4bc;
+      background: #fcf8f5;
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 14px 0;
+      font-size: 14px;
+      color: var(--ink-2);
+      line-height: 1.8;
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 16px;
+      font-size: 13px;
+    }
+    .compare-table th {
+      text-align: left;
+      background: #f6efe9;
+      color: var(--ink);
+      font-weight: 700;
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      font-size: 12.5px;
+    }
+    .compare-table td {
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      color: var(--ink-2);
+      vertical-align: top;
+      line-height: 1.65;
+    }
+    .compare-table td b { color: var(--ink); font-weight: 600; }
+
+    /* 指南步骤 */
+    .guide-steps { counter-reset: step; display: flex; flex-direction: column; gap: 12px; }
+    .guide-step {
+      display: flex;
+      gap: 14px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel-alt);
+      scroll-margin-top: var(--offset);
+    }
+    .guide-step::before {
+      counter-increment: step;
+      content: counter(step, decimal-leading-zero);
+      flex-shrink: 0;
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--brand);
+      opacity: 0.85;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.3;
+      width: 30px;
+    }
+    .guide-step h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 3px; color: var(--ink); }
+    .guide-step p { font-size: 13px; color: var(--ink-2); line-height: 1.72; }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 9px; }
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--panel);
+    }
+    .faq-item summary {
+      padding: 13px 16px;
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      list-style: none;
+      position: relative;
+      padding-right: 38px;
+      transition: background .14s;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary:hover { background: #fcf8f5; }
+    .faq-item summary::after {
+      content: "+";
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 19px;
+      font-weight: 400;
+      color: var(--brand);
+      transition: transform .18s;
+    }
+    .faq-item[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+    .faq-item[open] summary { background: #fdf6f4; }
+    .faq-answer { padding: 0 16px 15px; font-size: 13.8px; line-height: 1.82; color: var(--ink-2); }
+    .faq-answer b { color: var(--ink); font-weight: 600; }
+
+    /* 评论 */
+    .comment-list { display: flex; flex-direction: column; gap: 12px; }
+    .comment-item {
+      display: flex;
+      gap: 12px;
+      padding: 13px 0;
+      border-bottom: 1px dashed var(--line);
+    }
+    .comment-item:last-child { border-bottom: none; }
+    .comment-avatar {
+      flex-shrink: 0;
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #d8b9b0, #b88a7e);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.02em;
+    }
+    .comment-body { flex: 1; min-width: 0; }
+    .comment-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 3px; flex-wrap: wrap; }
+    .comment-name { font-size: 13px; font-weight: 700; color: var(--ink); }
+    .comment-date { font-size: 11px; color: var(--ink-3); }
+    .comment-text { font-size: 13.6px; color: var(--ink-2); line-height: 1.72; }
+    .comment-text .mention { color: var(--brand); }
+
+    /* 资讯 */
+    .news-list { display: flex; flex-direction: column; gap: 0; }
+    .news-item {
+      display: flex;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      align-items: flex-start;
+    }
+    .news-item:first-child { padding-top: 0; }
+    .news-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .news-thumb {
+      flex-shrink: 0;
+      width: 96px;
+      aspect-ratio: 3/2;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #eee;
+    }
+    .news-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .news-main { flex: 1; min-width: 0; }
+    .news-title { font-size: 14.8px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+    .news-title a:hover { color: var(--brand); }
+    .news-meta { font-size: 11.5px; color: var(--ink-3); margin-bottom: 4px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .news-summary { font-size: 12.8px; color: var(--ink-2); line-height: 1.65; }
+
+    /* 推荐标签 */
+    .rec-tags { display: flex; flex-wrap: wrap; gap: 9px; }
+    .rec-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--panel-alt);
+      font-size: 13px;
+      color: var(--ink-2);
+      transition: all .15s;
+    }
+    .rec-tag:hover { border-color: #e6c4bc; background: #fdf1ee; color: var(--brand-dark); transform: translateY(-1px); }
+    .rec-tag .n { font-size: 11px; color: var(--ink-3); }
+
+    /* 榜单 */
+    .rank-list { display: flex; flex-direction: column; gap: 0; }
+    .rank-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 11px 0;
+      border-bottom: 1px dashed var(--line);
+    }
+    .rank-item:last-child { border-bottom: none; }
+    .rank-num {
+      width: 24px;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--ink-3);
+      font-variant-numeric: tabular-nums;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .rank-item:nth-child(1) .rank-num { color: #c0392b; }
+    .rank-item:nth-child(2) .rank-num { color: #d9772f; }
+    .rank-item:nth-child(3) .rank-num { color: #b8912f; }
+    .rank-main { flex: 1; min-width: 0; }
+    .rank-name { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
+    .rank-desc { font-size: 12px; color: var(--ink-3); line-height: 1.55; }
+    .rank-score { flex-shrink: 0; font-size: 12px; font-weight: 700; color: var(--brand); font-variant-numeric: tabular-nums; }
+
+    /* 互动投稿 */
+    .submit-panel {
+      background: linear-gradient(135deg, #2a1410 0%, #3d1f18 100%);
+      border-radius: var(--radius-card);
+      border: 1px solid #4a2018;
+      padding: 26px;
+      color: #f0e3d4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      flex-wrap: wrap;
+      scroll-margin-top: var(--offset);
+    }
+    .submit-panel h2 { font-size: 20px; font-weight: 800; color: #f4c542; margin-bottom: 6px; }
+    .submit-panel p { font-size: 13.5px; color: #c7b3a3; line-height: 1.7; max-width: 560px; }
+    .submit-panel .btn-primary { flex-shrink: 0; }
+
+    /* 右侧辅助栏 */
+    .sidebar { position: sticky; top: var(--offset); display: flex; flex-direction: column; gap: 20px; }
+    .side-box {
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--line);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      scroll-margin-top: var(--offset);
+    }
+    .side-box h3 {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+      padding-bottom: 9px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 11px;
+    }
+    .side-hot-list { display: flex; flex-direction: column; gap: 10px; }
+    .side-hot-item { display: flex; gap: 10px; align-items: flex-start; }
+    .side-hot-num {
+      flex-shrink: 0;
+      width: 18px; height: 18px;
+      border-radius: 4px;
+      background: #f2ece5;
+      color: var(--ink-3);
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .side-hot-item:nth-child(-n+3) .side-hot-num { background: var(--brand); color: #fff; }
+    .side-hot-item a { font-size: 13px; color: var(--ink-2); line-height: 1.55; }
+    .side-hot-item a:hover { color: var(--brand); }
+    .side-hot-item .hot-num { font-size: 11px; color: var(--ink-3); }
+
+    .side-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .side-tags a {
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 14px;
+      background: #f6efe9;
+      color: var(--ink-2);
+      transition: background .14s, color .14s;
+    }
+    .side-tags a:hover { background: #fdf1ee; color: var(--brand-dark); }
+
+    .side-timeline { display: flex; flex-direction: column; gap: 0; }
+    .side-tl-item {
+      display: flex;
+      gap: 11px;
+      padding: 9px 0;
+      border-bottom: 1px dashed var(--line);
+      font-size: 12.5px;
+    }
+    .side-tl-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .side-tl-item .tl-date { flex-shrink: 0; color: var(--ink-3); font-variant-numeric: tabular-nums; width: 44px; }
+    .side-tl-item .tl-text { color: var(--ink-2); line-height: 1.55; }
+
+    /* 回到顶部 */
+    .back-top {
+      position: fixed;
+      right: 22px;
+      bottom: 26px;
+      z-index: 90;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--brand);
+      color: #fff;
+      border: none;
+      box-shadow: 0 4px 14px rgba(192,57,43,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity .2s, transform .2s, visibility .2s, background .15s;
+    }
+    .back-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+    .back-top:hover { background: var(--brand-light); }
+    .back-top svg { width: 20px; height: 20px; }
+
+    /* 移动端抽屉遮罩 */
+    .drawer-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(20,14,12,0.5);
+      z-index: 120;
+      backdrop-filter: blur(2px);
+    }
+    .drawer-overlay.show { display: block; }
+
+    /* ---------- 页脚 ---------- */
+    .site-footer {
+      background: #1a1210;
+      color: #b9a898;
+      padding: 44px 20px 26px;
+      margin-top: 20px;
+    }
+    .footer-inner { max-width: 1380px; margin: 0 auto; }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 32px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid #33241e;
+    }
+    .footer-brand .logo-text { color: #f0e3d4; font-size: 20px; }
+    .footer-brand .logo-text em { color: #e05a4f; }
+    .footer-desc { font-size: 13px; line-height: 1.8; color: #a89484; margin-top: 12px; max-width: 320px; }
+    .footer-col h4 { font-size: 13.5px; font-weight: 700; color: #e8d8ca; margin-bottom: 12px; letter-spacing: 0.04em; }
+    .footer-col a { display: block; font-size: 12.8px; color: #a89484; padding: 3px 0; transition: color .14s; }
+    .footer-col a:hover { color: #f4c542; }
+    .footer-bottom {
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      color: #7d6c5e;
+    }
+    .footer-bottom .update-note { color: #a89484; }
+    .footer-bottom .update-note b { color: #f4c542; font-weight: 600; }
+
+    /* ---------- 响应式 ---------- */
+    @media (max-width: 1024px) {
+      .layout {
+        grid-template-columns: 180px minmax(0, 1fr);
+        gap: 22px;
+      }
+      .sidebar {
+        position: static;
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .hero-inner { grid-template-columns: 1fr; gap: 30px; padding: 42px 20px 40px; }
+      .hero-visual { display: none; }
+      .hero-desc { max-width: 100%; }
+      .footer-top { grid-template-columns: 1.4fr 1fr 1fr; }
+    }
+
+    @media (max-width: 740px) {
+      :root { --header-h: 54px; --notice-h: 36px; }
+      .notice-items { gap: 16px; font-size: 12px; }
+      .notice-brand { font-size: 12px; }
+      .header-inner { gap: 10px; padding: 0 14px; }
+      .logo-text { font-size: 16.5px; }
+      .main-nav {
+        display: none;
+        position: fixed;
+        top: calc(var(--notice-h) + var(--header-h));
+        left: 0; right: 0;
+        background: #fff;
+        border-bottom: 1px solid var(--line);
+        padding: 10px 14px 16px;
+        z-index: 98;
+        flex-direction: column;
+        gap: 2px;
+        max-height: calc(100vh - var(--notice-h) - var(--header-h));
+        overflow-y: auto;
+        box-shadow: 0 12px 24px rgba(30,30,36,0.12);
+      }
+      .main-nav.open { display: flex; }
+      .main-nav a { padding: 11px 12px; font-size: 14px; border-radius: 8px; }
+      .hamburger { display: flex; }
+      .search-box { display: none; }
+      .btn-ghost { display: none; }
+
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 16px 12px 40px;
+        gap: 16px;
+      }
+      .channel-nav {
+        position: static;
+        display: flex;
+        overflow-x: auto;
+        gap: 4px;
+        padding: 10px;
+        border-radius: 10px;
+        scrollbar-width: none;
+      }
+      .channel-nav::-webkit-scrollbar { display: none; }
+      .channel-nav h2 { display: none; }
+      .channel-nav a { flex-shrink: 0; font-size: 12.5px; padding: 6px 12px; border-radius: 16px; background: #f6efe9; }
+      .channel-nav a span.count { display: none; }
+
+      .section { padding: 18px 15px 20px; border-radius: 12px; margin-bottom: 16px; }
+      .section-head h2 { font-size: 18px; }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .card-grid { grid-template-columns: 1fr; }
+      .sidebar { grid-template-columns: 1fr; }
+      .news-thumb { width: 74px; }
+      .update-time { width: 54px; font-size: 11px; }
+      .submit-panel { padding: 20px; }
+      .submit-panel h2 { font-size: 18px; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 22px; }
+      .footer-brand { grid-column: 1 / -1; }
+      .back-top { right: 14px; bottom: 16px; width: 40px; height: 40px; }
+      .compare-table { font-size: 12px; }
+      .compare-table th, .compare-table td { padding: 6px 7px; }
+    }
+
+    @media (max-width: 420px) {
+      .cat-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 30px; }
+      .hero-desc { font-size: 14px; }
+      .hero-actions .btn-primary, .hero-actions .btn-outline-light { width: 100%; justify-content: center; }
+      .hero-stats { gap: 18px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    }
+
+    :focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; border-radius: 3px; }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="notice-bar" role="banner" aria-label="站点公告">
+    <div class="notice-inner">
+      <span class="notice-brand">黑料海角网</span>
+      <div class="notice-items">
+        <span><b>11月8日</b> · 「某选秀节目后台录音流出」条目更新</span>
+        <span><b>11月7日</b> · 新增「直播带货刷单风波」当事人回应</span>
+        <span><b>11月6日</b> · 社区本周新增 27 条爆料整理</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="黑料海角网首页">
+        <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
+          <rect width="100" height="100" rx="20" fill="#1a1e2c"/>
+          <path d="M28 65 50 22 72 65Z" fill="#e05a4f"/>
+          <circle cx="50" cy="72" r="7" fill="#f4c542"/>
+        </svg>
+        <span class="logo-text">黑料<em>海角</em>网</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <a href="#section-overview">领域概览</a>
+        <a href="#section-featured">精选爆料</a>
+        <a href="#section-updates">最新动态</a>
+        <a href="#section-categories">分类索引</a>
+        <a href="#section-deep">深度解析</a>
+        <a href="#section-guide">消费指南</a>
+        <a href="#section-faq">常见问答</a>
+        <a href="#section-comments">用户评论</a>
+        <a href="#section-news">相关资讯</a>
+        <a href="#section-recommend">内容推荐</a>
+        <a href="#section-rank">热门榜单</a>
+        <a href="#section-submit">投稿互动</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-box" role="search">
+          <input type="text" id="searchInput" placeholder="搜索条目或关键词" aria-label="搜索站内内容">
+          <button type="button" id="searchBtn">搜索</button>
+        </div>
+        <button class="btn-ghost" type="button" data-scroll-to="#section-submit">投稿</button>
+        <button class="hamburger" id="hamburger" aria-label="打开导航菜单" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="hero-badge"><i></i> 圈内动态 · 社区讨论 · 当事人回应</span>
+        <h1 id="hero-title">黑料海角网</h1>
+        <p class="hero-desc">
+          聚合选秀后台录音、直播刷单争议、MCN合约纠纷、综艺剪辑风波等圈内具体事件条目，提供<strong>时间线梳理、多方信源对照、当事人原话摘录</strong>与社区讨论摘要，适合想快速了解事件来龙去脉的读者。
+        </p>
+        <div class="hero-actions">
+          <a href="#section-featured" class="btn-primary">浏览精选条目</a>
+          <a href="#section-deep" class="btn-outline-light">查看深度解析</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>37</b> 本周新增条目</div>
+          <div><b>12</b> 个内容分类</div>
+          <div><b>11月8日</b> 最近更新</div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 380 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#e05a4f"/>
+              <stop offset="100%" stop-color="#8e2a20"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#f4c542" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#c98a1e" stop-opacity="0.6"/>
+            </linearGradient>
+          </defs>
+          <circle cx="190" cy="160" r="130" stroke="#3d2a24" stroke-width="1.5" stroke-dasharray="4 7"/>
+          <circle cx="190" cy="160" r="96" stroke="#4a2f27" stroke-width="1.5"/>
+          <path d="M190 64 L268 206 L112 206 Z" fill="url(#g1)" opacity="0.92"/>
+          <path d="M190 96 L238 190 L142 190 Z" fill="#1a1210" opacity="0.55"/>
+          <circle cx="190" cy="232" r="15" fill="url(#g2)"/>
+          <path d="M190 64 L190 28" stroke="#f4c542" stroke-width="2" stroke-linecap="round"/>
+          <path d="M268 206 L304 226" stroke="#e05a4f" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+          <path d="M112 206 L76 226" stroke="#e05a4f" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+          <circle cx="190" cy="28" r="4" fill="#f4c542"/>
+          <circle cx="304" cy="226" r="4" fill="#e05a4f"/>
+          <circle cx="76" cy="226" r="4" fill="#e05a4f"/>
+          <text x="190" y="272" text-anchor="middle" fill="#a89484" font-size="10" font-family="sans-serif" letter-spacing="3">ARCHIVE · 2026</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主体三栏布局 -->
+  <div class="layout">
+
+    <!-- 左频道索引 -->
+    <aside class="channel-nav" aria-label="频道索引">
+      <h2>频道索引</h2>
+      <a href="#section-featured" class="active">精选爆料 <span class="count">12</span></a>
+      <a href="#section-updates">最新动态 <span class="count">10</span></a>
+      <a href="#section-categories">分类索引 <span class="count">8</span></a>
+      <a href="#section-deep">深度解析 <span class="count">6</span></a>
+      <a href="#section-guide">消费指南 <span class="count">5</span></a>
+      <a href="#section-faq">常见问答 <span class="count">6</span></a>
+      <a href="#section-comments">用户评论 <span class="count">16</span></a>
+      <a href="#section-news">相关资讯 <span class="count">6</span></a>
+      <a href="#section-recommend">内容推荐 <span class="count">8</span></a>
+      <a href="#section-rank">热门榜单 <span class="count">8</span></a>
+      <a href="#section-submit">投稿互动 <span class="count">—</span></a>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="main-content" id="mainContent">
+
+      <!-- 1. 领域概览 -->
+      <section class="section" id="section-overview">
+        <div class="section-head">
+          <h2>圈内争议与爆料条目概览</h2>
+          <span class="sub">2026年10月—11月</span>
+        </div>
+        <div class="overview-text">
+          <p>这类内容围绕娱乐圈、直播电商、选秀综艺和MCN机构展开，核心是“事件条目”本身——谁在什么时间做了什么，有哪些录音、截图、合同或当事人原话可以对照。近期讨论集中在几个方向：选秀节目<strong>后台管理录音流出</strong>引发的选手待遇争议；直播带货中<strong>刷单退款率异常</strong>被品牌方公开点名；某MCN机构与签约达人之间的<strong>收益分成纠纷</strong>进入仲裁阶段；以及综艺后期剪辑导致的<strong>嘉宾形象争议</strong>。</p>
+          <p>与早期只放截图和聊天记录不同，2026年10月以来的条目明显更注重<strong>时间线整理</strong>和<strong>多方信源并置</strong>。以11月5日更新的“选秀后台录音”条目为例，整理者同时列出了节目组声明、选手经纪人朋友圈截图、以及两位现场工作人员的匿名描述，并在每条信息旁标注了来源渠道和可信度评级。这种处理方式让读者能自己判断哪部分有实证、哪部分仍属单方说法。</p>
+          <p>值得关注的具体条目还包括：10月28日“某头部主播刷单风波”中品牌方晒出的后台退款数据截图（退款率47%）；11月2日“MCN合约纠纷”里曝光的保底收益条款原文；以及10月19日“综艺剪辑争议”中未播片段与正片的画面对比。这些内容都附有可核对的日期、数字或原文摘录，而非笼统的“据说”。</p>
+        </div>
+      </section>
+
+      <!-- 2. 精选内容推荐 -->
+      <section class="section" id="section-featured">
+        <div class="section-head">
+          <h2>本周精选爆料条目</h2>
+          <a href="#section-recommend" class="more-link">更多分类推荐</a>
+        </div>
+        <div class="card-grid" id="featuredGrid">
+
+          <article class="content-card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/xxhoutai01/400/300" width="400" height="300" loading="lazy" alt="选秀节目后台管理录音整理条目">
+              <span class="card-type">录音整理</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">选秀后台管理录音流出：选手排练时长与通告安排对照</h3>
+              <p class="card-desc">10月30日流出的三段录音中，节目组统筹与经纪团队就排练时间发生分歧。条目整理了录音时间轴，并附上同期选手公开行程表做交叉核对。</p>
+              <div class="card-tags">
+                <span class="tag tag-hot">选秀综艺</span>
+                <span class="tag">后台录音</span>
+                <span class="tag">选手待遇</span>
+              </div>
+              <div class="card-meta">
+                <span class="heat">热度 9.2万</span>
+                <span>更新 11-07</span>
+                <span>来源 4 条</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/zbshuadan02/400/300" width="400" height="300" loading="lazy" alt="直播带货刷单退款率数据截图">
+              <span class="card-type">数据核查</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">品牌方晒后台数据：某主播专场退款率47%的截图对照</h3>
+              <p class="card-desc">10月28日某护肤品牌运营在朋友圈发布后台截图，显示专场直播次日退款率达47%。条目收录了截图原图、品牌方补充说明和主播团队的否认声明。</p>
+              <div class="card-tags">
+                <span class="tag tag-hot">直播电商</span>
+                <span class="tag">退款率</span>
+                <span class="tag">品牌方</span>
+              </div>
+              <div class="card-meta">
+                <span class="heat">热度 8.7万</span>
+                <span>更新 11-06</span>
+                <span>来源 3 条</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/mcnhetong03/400/300" width="400" height="300" loading="lazy" alt="MCN机构与达人合约纠纷条款截图">
+              <span class="card-type">合同条款</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">MCN合约纠纷：保底收益条款原文与仲裁受理时间线</h3>
+              <p class="card-desc">11月2日曝光的合约第7页显示“保底收益按月结算，不足部分由机构补足”。达人方称已连续3个月未收到补足款，机构回应称需扣除平台服务费后再核算。</p>
+              <div class="card-tags">
+                <span class="tag tag-hot">MCN机构</span>
+                <span class="tag">收益分成</span>
+                <span class="tag">仲裁</span>
+              </div>
+              <div class="card-meta">
+                <span class="heat">热度 7.9万</span>
+                <span>更新 11-05</span>
+                <span>来源 5 条</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/zongyijianji04/400/300" width="400" height="300" loading="lazy" alt="综艺正片与未播片段画面对比">
+              <span class="card-type">剪辑对比</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">综艺剪辑争议：未播片段里嘉宾反应与正片顺序差异</h3>
+              <p class="card-desc">10月19日有网友逐帧对比第5期正片与花絮，发现嘉宾A的皱眉镜头在正片中被插到嘉宾B发言之前。条目附上了两组时间码和画面截图。</p>
+              <div class="card-tags">
+                <span class="tag tag-hot">综艺后期</span>
+                <span class="tag">剪辑顺序</span>
+                <span class="tag">未播片段</span>
+              </div>
+              <div class="card-meta">
+                <span class="heat">热度 6.4万</span>
+                <span>更新 11-04</span>
+                <span>来源 2 条</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/daiyanshufeng05/400/300" width="400" height="300" loading="lazy" alt="代言人解约声明与品牌方公告">
+              <span class="card-type">代言变动</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">代言解约公告：品牌方11月1日声明与艺人工作室回应</h3>
+              <p class="card-desc">某国产美妆品牌11月1日上午发布解约声明，称“因合作理念调整”。艺人工作室两小时后回应“尊重品牌决定”，但条目注意到双方合约原定2027年3月到期。</p>
+              <div class="card-tags">
+                <span class="tag">品牌代言</span>
+                <span class="tag">解约声明</span>
+                <span class="tag">合约期限</span>
+              </div>
+              <div class="card-meta">
+                <span class="heat">热度 5.8万</span>
+                <span>更新 11-03</span>
+                <span>来源 4 条</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/fensirenzhi06/400/300" width="400" height="300" loading="lazy" alt="粉丝组织内部聊天记录整理">
+              <span class="card-type">聊天记录</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">粉丝后援会账目争议：应援资金流向截图与管理员回应</h3>
+              <p class="card-desc">10月25日某后援会前管理员公开2025年至今的应援账目截图，显示一笔8.6万元支出缺少发票。现任会长回应称“当时走的是线下代购，凭证在另一位负责人手里”。</p>
+              <div class="card-tags">
+                <span class="tag tag-hot">粉丝应援</span>
+                <span class="tag">账目</span>
+                <span class="tag">后援会</span>
+              </div>
+              <div class="card-meta">
+                <span class="heat">热度 5.3万</span>
+                <span>更新 11-02</span>
+                <span>来源 3 条</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- 3. 最新更新 / 动态 -->
+      <section class="section" id="section-updates">
+        <div class="section-head">
+          <h2>近十天条目更新动态</h2>
+          <span class="sub">按更新时间排序</span>
+        </div>
+        <div class="update-list">
+          <div class="update-item">
+            <div class="update-time"><span class="dot"></span>11-08</div>
+            <div class="update-main">
+              <h3 class="update-title"><a href="#section-featured">选秀后台录音条目补充第三位工作人员证言</a></h3>
+              <p class="update-summary">新增一段11月6日收到的匿名描述，称排练室签到表与节目组公布的“每日8小时”存在出入。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <div class="update-time"><span class="dot"></span>11-07</div>
+            <div class="update-main">
+              <h3 class="update-title"><a href="#section-featured">刷单风波主播团队发布第二份声明</a></h3>
+              <p class="update-summary">声明中首次给出具体数字：称专场实际成交1.2万单，退货5600单，退款率46.7%，与品牌方截图基本吻合。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <div class="update-time"><span class="dot"></span>11-06</div>
+            <div class="update-main">
+              <h3 class="update-title"><a href="#section-featured">MCN合约纠纷进入仲裁立案阶段</a></h3>
+              <p class="update-summary">达人方代理律师确认，仲裁委已于11月4日受理，争议金额暂计87万元，首次开庭排期在12月中旬。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <div class="update-time"><span class="dot"></span>11-05</div>
+            <div class="update-main">
+              <h3 class="update-title"><a href="#section-featured">综艺剪辑争议条目新增后期从业者采访</a></h3>
+              <p class="update-summary">一位从事综艺后期的剪辑师向条目整理者解释“反应镜头前置”在业内属于常见操作，但需在片尾字幕标注。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <div class="update-time"><span class="dot"></span>11-04</div>
+            <div class="update-main">
+              <h3 class="update-title"><a href="#section-featured">代言解约条目补充品牌方2025年财报数据</a></h3>
+              <p class="update-summary">财报显示该品牌2025年营销费用同比缩减18%，代言人相关支出占比从12%降至7%。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <div class="update-time"><span class="dot"></span>11-03</div>
+            <div class="update-main">
+              <h3 class="update-title"><a href="#section-featured">粉丝后援会账目争议新增前财务人员留言</a></h3>
+              <p class="update-summary">自称2025年担任过后援会财务的网友留言，称8.6万元支出对应的是“生日地铁广告位”，并贴出刊例价截图。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <div class="update-time"><span class="dot"></span>11-01</div>
+            <div class="update-main">
+              <h3 class="update-title"><a href="#section-rank">10月热门条目榜单发布</a></h3>
+              <p class="update-summary">榜单按站内阅读量和评论数加权计算，选秀录音条目以9.2万热度排名第一，刷单风波位列第二。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <div class="update-time"><span class="dot"></span>10-30</div>
+            <div class="update-main">
+              <h3 class="update-title"><a href="#section-deep">深度解析更新：如何核对录音类爆料的时间戳</a></h3>
+              <p class="update-summary">新增一节内容，用选秀录音和另一起商务谈判录音做对比，列出设备时间、环境音、说话人切换三个核对点。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. 分类入口 -->
+      <section class="section" id="section-categories">
+        <div class="section-head">
+          <h2>按事件类型查找</h2>
+          <span class="sub">8 个分类索引</span>
+        </div>
+        <div class="cat-grid">
+          <a href="#section-featured" class="cat-item">
+            <span class="cat-name">选秀综艺争议</span>
+            <span class="cat-desc">后台录音、排练时长、选手合约</span>
+            <span class="cat-count">9 条相关</span>
+          </a>
+          <a href="#section-featured" class="cat-item">
+            <span class="cat-name">直播电商纠纷</span>
+            <span class="cat-desc">刷单退款、品牌方点名、专场数据</span>
+            <span class="cat-count">7 条相关</span>
+          </a>
+          <a href="#section-featured" class="cat-item">
+            <span class="cat-name">MCN与达人合约</span>
+            <span class="cat-desc">保底收益、分成比例、仲裁进展</span>
+            <span class="cat-count">5 条相关</span>
+          </a>
+          <a href="#section-featured" class="cat-item">
+            <span class="cat-name">综艺后期剪辑</span>
+            <span class="cat-desc">正片与花絮对比、反应镜头前置</span>
+            <span class="cat-count">4 条相关</span>
+          </a>
+          <a href="#section-featured" class="cat-item">
+            <span class="cat-name">品牌代言变动</span>
+            <span class="cat-desc">解约公告、合约期限、财报数据</span>
+            <span class="cat-count">6 条相关</span>
+          </a>
+          <a href="#section-featured" class="cat-item">
+            <span class="cat-name">粉丝应援账目</span>
+            <span class="cat-desc">后援会资金、发票缺失、管理员回应</span>
+            <span class="cat-count">3 条相关</span>
+          </a>
+          <a href="#section-featured" class="cat-item">
+            <span class="cat-name">艺人工作室声明</span>
+            <span class="cat-desc">回应原文、措辞对比、发布时间</span>
+            <span class="cat-count">8 条相关</span>
+          </a>
+          <a href="#section-featured" class="cat-item">
+            <span class="cat-name">平台规则与处罚</span>
+            <span class="cat-desc">限流通知、违规扣分、申诉记录</span>
+            <span class="cat-count">4 条相关</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 5. 深度解析 -->
+      <section class="section deep" id="section-deep">
+        <div class="section-head">
+          <h2>录音、截图与合同：三类爆料的核对路径</h2>
+          <span class="sub">深度解析</span>
+        </div>
+
+        <h3>录音类条目：先看设备时间，再看说话人身份</h3>
+        <p>11月7日更新的选秀后台录音条目里，整理者标注了每段录音的文件创建时间：第一段为10月28日22:14，第二段为10月29日01:07，第三段为10月30日19:33。三段音频的环境音不同——第一段有走廊广播声，第二段几乎无声，第三段能听到电梯提示音。这些细节本身不证明内容真假，但能帮助判断录音是否发生在同一场景、是否为连续录制。</p>
+        <p>更关键的是说话人身份。条目中列出的三位说话人，只有一位在后续被节目组工作人员间接确认“是统筹组的人”，另两位仍标注为“待核实”。整理者没有把待核实的信息当作事实使用，而是在每条引述后注明了“仅一方指认”。</p>
+        <div class="deep-quote">核对录音类爆料的顺序建议：文件时间戳 → 环境音连续性 → 说话人身份确认 → 内容与公开行程的交叉比对。四个环节缺一个，结论的可信度就要往下调一档。</div>
+
+        <h3>数据截图类条目：截图能证明什么、不能证明什么</h3>
+        <p>刷单风波里品牌方晒出的后台截图显示“支付订单12,340笔，退款订单5,802笔”，退款率46.7%。截图本身能证明的是：该品牌后台在某个时间点存在这样一组数据。不能证明的是：这些退款是否全部来自刷单、主播团队是否知情、以及截图是否经过裁剪。</p>
+        <p>条目整理者做了两件事：第一，把品牌方11月7日声明中“实际发货约6,500单”与截图数据并列，指出差额约2,000单没有解释；第二，把主播团队11月7日声明中的“退货5,600单”与截图中的5,802单并列，差额202单同样没有说明。两组数字放在一起，读者能看出双方对同一场直播的订单统计口径不一致。</p>
+        <table class="compare-table">
+          <thead>
+            <tr><th>核对项</th><th>品牌方说法</th><th>主播团队说法</th><th>可核对程度</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>支付订单数</td><td>12,340 笔</td><td>12,000 余笔</td><td>基本一致</td></tr>
+            <tr><td>退款订单数</td><td>5,802 笔</td><td>5,600 笔</td><td>差 202 笔</td></tr>
+            <tr><td>实际发货数</td><td>约 6,500 单</td><td>未给出</td><td>单方数据</td></tr>
+            <tr><td>退款原因归类</td><td>未提供</td><td>称“多为物流延迟”</td><td>待第三方佐证</td></tr>
+          </tbody>
+        </table>
+
+        <h3>合同条款类条目：保底收益的“保底”到底保什么</h3>
+        <p>MCN合约纠纷中曝光的第7页条款原文是：“保底收益按月结算，当月实际分成不足保底金额的，差额部分由机构于次月15日前补足。”达人方主张的是：2026年8月、9月、10月连续三个月，实际到账金额均低于合同约定的月保底3.8万元，机构未补足差额。机构方的回应是：合同附件第3条写明“保底金额为税前，且需扣除平台技术服务费、退货款后再行核算”。</p>
+        <p>两种说法的分歧不在“保底”这个词，而在计算基数。附件第3条是否在签约时一并交付、达人是否签字确认，截至11月8日公开的信息里没有看到签字页。这条信息缺失直接影响了舆论判断的方向：在签字页出现之前，机构方关于“附件已交付”的说法只能算单方陈述。</p>
+
+        <h3>信息分层：已公开事实、当事人回应与网友推测</h3>
+        <ul>
+          <li><b>已公开事实：</b>选秀节目组10月31日发布声明确认“存在排练时间调整”；品牌方11月6日提供了后台截图；仲裁委11月4日受理了MCN纠纷案。</li>
+          <li><b>当事人回应：</b>主播团队否认刷单，称“退款率在行业正常波动范围”；MCN机构称附件条款签约时已告知；综艺节目组未回应剪辑顺序问题。</li>
+          <li><b>媒体转述：</b>两家行业媒体在11月5日的报道中引用了“接近节目组的人士”说法，称录音流出与内部人事变动有关，该说法未获节目组确认。</li>
+          <li><b>网友推测：</b>关于录音中第三位说话人身份的猜测，在条目评论区出现了至少四个版本，均无实证。</li>
+        </ul>
+      </section>
+
+      <!-- 6. 体验指南 / 消费路径 -->
+      <section class="section" id="section-guide">
+        <div class="section-head">
+          <h2>从条目到判断：内容消费顺序建议</h2>
+          <span class="sub">阅读路径</span>
+        </div>
+        <div class="guide-steps">
+          <div class="guide-step">
+            <div>
+              <h4>先看条目页顶部的“信息分层”标签</h4>
+              <p>每条爆料在开头会标注哪些是已公开事实、哪些是当事人单方说法、哪些仍属待核实。先扫一眼这三类占比，能快速判断这条内容值不值得往下读。如果“待核实”占了大半，先放一放。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div>
+              <h4>再对时间线：事件发生、首次曝光、当事人回应三个节点</h4>
+              <p>以刷单风波为例，直播专场在10月25日，品牌方朋友圈截图在10月28日，主播团队首份声明在10月30日，第二份声明在11月7日。间隔越短，说明双方准备越充分；间隔长且内容变化大，则要留意前后说法是否一致。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div>
+              <h4>把同类条目横向比一次</h4>
+              <p>同样是录音类爆料，选秀后台录音附了三段文件的创建时间，另一起商务谈判录音只有一段剪辑版。前者可信度评级为“中”，后者为“低”。横比之后，对“有录音”这个说法本身就不会一概而论。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div>
+              <h4>评论区只当补充线索，不当证据</h4>
+              <p>评论区里自称“内部人员”的留言，即便细节丰富，只要没有可核对的文件、时间或第三方印证，就只算线索。11月6日一条自称“后期公司员工”的留言提到剪辑软件工程文件名，但未提供截图，条目整理者将其标注为“未经证实”。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div>
+              <h4>涉及合同和金额的条目，优先找附件和签字页</h4>
+              <p>MCN合约纠纷里，正文条款和附件条款的分歧是核心。没有签字页，就无法确认附件是否在签约时交付。遇到类似条目，先翻到“文件清单”部分，看有没有附件页、签字页、骑缝章照片。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. FAQ -->
+      <section class="section" id="section-faq">
+        <div class="section-head">
+          <h2>关于爆料条目的常见问题</h2>
+          <span class="sub">6 个问答</span>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>选秀后台录音里第三位说话人确认身份了吗？</summary>
+            <div class="faq-answer">截至11月8日，第三位说话人的身份仍标注为“待核实”。节目组10月31日声明只确认“存在排练时间调整”，没有回应录音中具体人员的身份问题。条目中列出了两种指认说法，均来自匿名信源，未获交叉印证。</div>
+          </details>
+          <details class="faq-item">
+            <summary>直播刷单风波里品牌方晒的退款率47%是怎么算的？</summary>
+            <div class="faq-answer">按品牌方后台截图，支付订单12,340笔，退款订单5,802笔，5,802除以12,340约等于47.0%。主播团队11月7日声明给出的数字是“退货5,600单”，对应退款率约46.7%。两组数据的差额主要来自统计时间窗口不同——品牌方统计到11月3日，主播团队统计到11月5日。</div>
+          </details>
+          <details class="faq-item">
+            <summary>MCN合约里的保底收益条款，附件和正文冲突时以哪个为准？</summary>
+            <div class="faq-answer">合同一般约定附件与正文具有同等效力，冲突时以“双方另行签署的补充协议”或“附件中特别约定”为准。这起纠纷的关键在于附件第3条是否有达人签字确认。目前公开材料中没有看到签字页，机构方称“签约时已交付”，达人方称“从未见过附件”，双方各执一词。</div>
+          </details>
+          <details class="faq-item">
+            <summary>综艺剪辑争议里“反应镜头前置”算违规吗？</summary>
+            <div class="faq-answer">行业通行做法是：如果反应镜头被挪到不同语境下使用，且改变了观众对嘉宾态度或事件因果的理解，需要在片尾或平台页面作出说明。11月5日一位后期从业者在采访中提到，多数综艺合同会约定“剪辑需符合公序良俗”，但不会细化到镜头顺序。是否违规取决于合同具体条款和是否造成实质性误导。</div>
+          </details>
+          <details class="faq-item">
+            <summary>粉丝后援会账目争议里8.6万元支出有对应凭证吗？</summary>
+            <div class="faq-answer">前管理员公开的账目截图显示该笔支出摘要为“线下应援物料”，无发票附件。11月3日一位自称2025年担任财务的网友留言称对应的是“生日地铁广告位”，并贴出一张刊例价截图，但截图中广告位周期为两周，与账目记录的“一个月”不一致。目前该笔支出的完整凭证尚未公开。</div>
+          </details>
+          <details class="faq-item">
+            <summary>品牌代言解约公告里“合作理念调整”通常指什么？</summary>
+            <div class="faq-answer">在品牌代言语境下，这个措辞一般对应三种情况：品牌方营销策略转向（如缩减代言人预算）、艺人方面出现舆论风险、或双方在续约条件上未达成一致。该品牌2025年财报显示营销费用同比缩减18%，代言人支出占比从12%降至7%，与“策略转向”的吻合度更高。艺人工作室回应中未提及具体原因。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8. 用户评论 -->
+      <section class="section" id="section-comments">
+        <div class="section-head">
+          <h2>条目下的用户讨论</h2>
+          <span class="sub">16 条精选评论</span>
+        </div>
+        <div class="comment-list">
+
+          <div class="comment-item">
+            <div class="comment-avatar">林</div>
+            <div class="comment-body">
+              <div class="comment-head"><span class="comment-name">林间有风</span><span class="comment-date">11-08 09:14</span></div>
+              <p class="comment-text">选秀录音那个条目整理得确实细，三段音频的时间戳和广播声对得上，比之前只放一段剪辑版的靠谱多了。不过第三位说话人到底是谁，评论区四个版本没一个能拿出证据的。</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <div class="comment-avatar">陈</div>
+            <div class="comment-body">
+              <div class="comment-head"><span class="comment-name">陈默不沉默</span><span class="comment-date">11-08 08:47</span></div>
+              <p class="comment-text">刷单那个47%的退款率，做电商的都知道大促后退款率会冲高，但47%确实离谱。品牌方截图里实际发货6500单这个数才是重点，剩下两千单没发货也没退款，卡在哪儿了？</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <div class="comment-avatar">Z</div>
+            <div class="comment-body">
+              <div class="comment-head"><span class="comment-name">Zoe在加班</span><span class="comment-date">11-07 22:31</span></div>
+              <p class="comment-text">MCN那个合同附件签字页要是真没有，机构就挺被动的。但话说回来，达人签合同不看附件也不现实吧，双方可能都有问题。</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <div class="comment-avatar">酸</div>
+            <div class="comment-body">
+              <div class="comment-head"><span class="comment-name">酸菜鱼不要鱼</span><span class="comment-date">11-07 19:02</span></div>
+              <p class="comment-text">综艺剪辑那个逐帧对比看了，反应镜头前置确实改变了观感。不过说实话综艺剪辑本来就有引导性，只要不恶意拼接，观众心里有数就行。</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <div class="comment-avatar">大</div>
+            <div class="comment-body">
+              <div class="comment-head"><span class="comment-name">大橘为重</span><span class="comment-date">11-07 15:26</span></div>
+              <p class="comment-text">后援会账目那个8.6万，刊例价截图周期对不上，这事就有点说不清了。以前追星也交过应援钱，从来没见过明细，都是会长说多少就是多少。</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <div class="comment-avatar">半</div>
+            <div class="comment-body">
+              <div class="comment-head"><span class="comment-name">半糖去冰</span><span class="comment-date">11-06 23:40</span></div>
+              <p class="comment-text">代言解约那个，“合作理念调整”基本就是万能话术。财报里营销费用砍了18%，比什么声明都实在。</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <div class="comment-avatar">老</div>
+            <div class="comment-body">
+              <div class="comment-head"><span class="comment-name">老张看热闹</span><span class="comment-date">11-06 18:11</span></div>
+              <p class="comment-text">首页那个“信息分层”标签挺有用的，已公开事实和网友推测分开列，省得看半天才发现是猜的。</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <div class="comment-avatar">K</div>
+            <div class="comment-body">
+              <div class="comment-head"><span class="comment-name">Kira不吃香菜</span><span class="comment-date">11-06 12:35</span></div>
+              <p class="comment-text">说个跑题的，昨天那个榜单第一的条目封面图挺好看的，后来发现是picsum的占位图，我说怎么这么有氛围感。</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <div class="comment-avatar">橘</div>
+            <div class="comment-body">
+              <div class="comment-head"><span class="comment-name">橘子汽水冒泡</span><span class="comment-date">11-05 21:08</span></div>
+              <p class="comment-text">刷单事件双方声明我都看了，品牌方说“物流延迟导致退款”，主播团队也说“物流延迟”，口径突然一致了。但退款原因归类截图到现在也没人放出来。</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <div class="comment-avatar">不</div>
+            <div class="comment-body">
+              <div class="comment-head"><span class="comment-name">不想上班的鱼</span><span class="comment-date">11-05 17:53</span></div>
+              <p class="comment-text">深度解析里录音核对那四个环节，挺实用的。之前看过一个爆料，录音只有一段，环境音从头到尾没变过，后来发现是同一个房间录的，所谓“不同时间”根本站不住。</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <div class="comment-avatar">阿</div>
+            <div class="comment-body">
+              <div class="comment-head"><span class="comment-name">阿绿啊</span><span class="comment-date">11-05 10:19</span></div>
+              <p class="comment-text">选秀那个排练时长，节目组说每天8小时，录音里统筹说“今天到凌晨两点”，算下来肯定超了。但签到表这种东西，节目组真想改也不是改不了。</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <div class="comment-avatar">麦</div>
+            <div class="comment-body">
+              <div class="comment-head"><span class="comment-name">麦兜的夏天</span><span class="comment-date">11-04 22:47</span></div>
+              <p class="comment-text">MCN纠纷那个仲裁金额87万，按保底3.8万一个月算，三年也就一百多万，扣掉已付的部分，数字大致对得上。等12月开庭结果吧。</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <div class="comment-avatar">七</div>
+            <div class="comment-body">
+              <div class="comment-head"><span class="comment-name">七号观察员</span><span class="comment-date">11-04 14:02</span></div>
+              <p class="comment-text">这站更新速度还行，昨天的事情今天就有条目了。就是有些条目只有两三行，点进去还在“整理中”，希望更新快一点。</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <div class="comment-avatar">一</div>
+            <div class="comment-body">
+              <div class="comment-head"><span class="comment-name">一只小透明</span><span class="comment-date">11-03 20:36</span></div>
+              <p class="comment-text">综艺后期那个从业者采访说得挺实在，反应镜头前置是常见操作，问题在于不标注。观众被剪辑带着走，回头发现真相，肯定生气。</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <div class="comment-avatar">水</div>
+            <div class="comment-body">
+              <div class="comment-head"><span class="comment-name">水母没有心脏</span><span class="comment-date">11-02 16:28</span></div>
+              <p class="comment-text">粉丝后援会那个事，前财务出来说话反而更乱了。刊例价截图是真的，但周期对不上，那到底是买了没买？还是买了两次？</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <div class="comment-avatar">莫</div>
+            <div class="comment-body">
+              <div class="comment-head"><span class="comment-name">莫得感情的阅读器</span><span class="comment-date">11-01 09:05</span></div>
+              <p class="comment-text">本周榜单前三都看了，选秀录音那个确实信息量最大。刷单风波排第二也行，MCN那个排第三有点意外，仲裁进展比数据截图更值得关注吧。</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 9. 相关资讯 -->
+      <section class="section" id="section-news">
+        <div class="section-head">
+          <h2>近期相关资讯</h2>
+          <span class="sub">6 条</span>
+        </div>
+        <div class="news-list">
+
+          <div class="news-item">
+            <div class="news-thumb">
+              <img src="https://picsum.photos/seed/newsxuanxiu01/600/400" width="600" height="400" loading="lazy" alt="选秀节目组发布排练管理声明">
+            </div>
+            <div class="news-main">
+              <h3 class="news-title"><a href="#section-featured">选秀节目组11月1日发布排练管理声明，未回应录音内容</a></h3>
+              <div class="news-meta"><span>2026-11-01</span><span>来源：节目官方微博</span></div>
+              <p class="news-summary">声明称“所有排练安排均符合录制计划”，并附上一张11月1日当天排练室签到表照片，照片中签到时间为8:30—17:30。未对录音中“到凌晨两点”的说法作任何解释。</p>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <div class="news-thumb">
+              <img src="https://picsum.photos/seed/newsshuan02/600/400" width="600" height="400" loading="lazy" alt="直播平台发布双11期间退款率统计规则说明">
+            </div>
+            <div class="news-main">
+              <h3 class="news-title"><a href="#section-featured">直播平台11月3日调整退款率统计口径，新增“48小时”节点</a></h3>
+              <div class="news-meta"><span>2026-11-03</span><span>来源：平台规则中心</span></div>
+              <p class="news-summary">新规则将退款率拆分为“支付后48小时内退款率”和“全周期退款率”两个指标，自11月10日起在主播后台展示。平台称此举为“帮助商家区分即时退款与售后退款”，与近期争议无关。</p>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <div class="news-thumb">
+              <img src="https://picsum.photos/seed/newsmcn03/600/400" width="600" height="400" loading="lazy" alt="MCN行业协会发布合约示范文本">
+            </div>
+            <div class="news-main">
+              <h3 class="news-title"><a href="#section-featured">行业协会11月4日发布MCN合约示范文本，保底条款需单列附件</a></h3>
+              <div class="news-meta"><span>2026-11-04</span><span>来源：行业协会官网</span></div>
+              <p class="news-summary">示范文本要求“保底收益、分成比例、结算周期”三项内容须以独立附件形式签署，并在正文中列明附件编号。协会称该文本为推荐性指引，不具强制力。</p>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <div class="news-thumb">
+              <img src="https://picsum.photos/seed/newszongyi04/600/400" width="600" height="400" loading="lazy" alt="综艺节目片尾新增剪辑说明字幕">
+            </div>
+            <div class="news-main">
+              <h3 class="news-title"><a href="#section-featured">综艺第6期片尾新增“部分镜头顺序有调整”字幕说明</a></h3>
+              <div class="news-meta"><span>2026-11-05</span><span>来源：节目正片</span></div>
+              <p class="news-summary">11月5日上线的第6期正片在片尾字幕最后一行增加了上述说明，时长停留约3秒。这是该节目开播以来首次在正片中标注剪辑调整。</p>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <div class="news-thumb">
+              <img src="https://picsum.photos/seed/newsdaiyan05/600/400" width="600" height="400" loading="lazy" alt="品牌方发布第三季度营销费用说明">
+            </div>
+            <div class="news-main">
+              <h3 class="news-title"><a href="#section-featured">品牌方11月6日投资者会议记录：代言人预算占比将继续下调</a></h3>
+              <div class="news-meta"><span>2026-11-06</span><span>来源：投资者关系页面</span></div>
+              <p class="news-summary">会议记录显示，管理层提到“2027年将把代言人相关预算占比控制在5%以内”，并称“更倾向于短期合作与效果付费”。该品牌2025年这一比例为7%。</p>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <div class="news-thumb">
+              <img src="https://picsum.photos/seed/newsfensi06/600/400" width="600" height="400" loading="lazy" alt="粉丝应援资金监管讨论帖截图">
+            </div>
+            <div class="news-main">
+              <h3 class="news-title"><a href="#section-featured">多个后援会11月7日陆续公布应援账目模板，含发票编号栏</a></h3>
+              <div class="news-meta"><span>2026-11-07</span><span>来源：后援会公告</span></div>
+              <p class="news-summary">至少四个艺人后援会在11月7日发布新版账目公示模板，新增“发票编号”“付款截图”“经手人”三栏。其中两个后援会表示“即日起按月公示”，此前为按季度。</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 10. 相关推荐 -->
+      <section class="section" id="section-recommend">
+        <div class="section-head">
+          <h2>按内容方向继续查找</h2>
+          <span class="sub">8 个推荐入口</span>
+        </div>
+        <div class="rec-tags">
+          <a href="#section-featured" class="rec-tag">选秀后台录音时间戳核对 <span class="n">9条</span></a>
+          <a href="#section-featured" class="rec-tag">直播专场退款率对比 <span class="n">7条</span></a>
+          <a href="#section-featured" class="rec-tag">MCN保底收益条款原文 <span class="n">5条</span></a>
+          <a href="#section-featured" class="rec-tag">综艺反应镜头前置案例 <span class="n">4条</span></a>
+          <a href="#section-featured" class="rec-tag">代言解约声明措辞对比 <span class="n">6条</span></a>
+          <a href="#section-featured" class="rec-tag">后援会应援账目凭证 <span class="n">3条</span></a>
+          <a href="#section-featured" class="rec-tag">艺人工作室回应原文 <span class="n">8条</span></a>
+          <a href="#section-featured" class="rec-tag">平台限流与申诉记录 <span class="n">4条</span></a>
+        </div>
+      </section>
+
+      <!-- 11. 补充板块：热门榜单 -->
+      <section class="section" id="section-rank">
+        <div class="section-head">
+          <h2>10月条目热度榜</h2>
+          <span class="sub">按阅读与评论加权</span>
+        </div>
+        <div class="rank-list">
+          <div class="rank-item">
+            <span class="rank-num">1</span>
+            <div class="rank-main">
+              <div class="rank-name">选秀后台管理录音流出</div>
+              <div class="rank-desc">三段录音时间戳完整，附排练签到表对照，评论区讨论量1,240条</div>
+            </div>
+            <span class="rank-score">9.2万</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-num">2</span>
+            <div class="rank-main">
+              <div class="rank-name">品牌方晒后台退款率47%截图</div>
+              <div class="rank-desc">双方声明数字差额202单，实际发货数未获解释</div>
+            </div>
+            <span class="rank-score">8.7万</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-num">3</span>
+            <div class="rank-main">
+              <div class="rank-name">MCN合约保底收益条款曝光</div>
+              <div class="rank-desc">附件签字页缺失成焦点，仲裁已受理</div>
+            </div>
+            <span class="rank-score">7.9万</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-num">4</span>
+            <div class="rank-main">
+              <div class="rank-name">综艺正片与未播片段逐帧对比</div>
+              <div class="rank-desc">两组时间码截图，后期从业者采访补充行业做法</div>
+            </div>
+            <span class="rank-score">6.4万</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-num">5</span>
+            <div class="rank-main">
+              <div class="rank-name">代言解约公告与工作室回应</div>
+              <div class="rank-desc">合约原定2027年到期，品牌2025年营销费缩减18%</div>
+            </div>
+            <span class="rank-score">5.8万</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-num">6</span>
+            <div class="rank-main">
+              <div class="rank-name">粉丝后援会8.6万元支出凭证争议</div>
+              <div class="rank-desc">刊例价截图周期对不上，前财务留言未提供完整凭证</div>
+            </div>
+            <span class="rank-score">5.3万</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-num">7</span>
+            <div class="rank-main">
+              <div class="rank-name">平台退款率统计口径调整说明</div>
+              <div class="rank-desc">新增48小时节点，11月10日起后台展示</div>
+            </div>
+            <span class="rank-score">4.1万</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-num">8</span>
+            <div class="rank-main">
+              <div class="rank-name">MCN合约示范文本发布</div>
+              <div class="rank-desc">保底条款需单列附件，协会称推荐性指引</div>
+            </div>
+            <span class="rank-score">3.6万</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 互动投稿 -->
+      <section class="submit-panel" id="section-submit">
+        <div>
+          <h2>有具体线索或条目要补充？</h2>
+          <p>如果你手里有录音文件的时间戳、合同附件照片、后台数据截图，或者当事人原话的出处链接，可以整理成条目线索提交。提交时请尽量注明文件创建时间、来源渠道和可核对的信息点，方便整理者做交叉比对。</p>
+        </div>
+        <button class="btn-primary" type="button" onclick="alert('投稿入口为示例功能，当前未接入实际提交系统。')">提交条目线索</button>
+      </section>
+
+    </main>
+
+    <!-- 右辅助栏 -->
+    <aside class="sidebar" aria-label="辅助信息">
+      <div class="side-box" id="side-hot">
+        <h3>站内热读</h3>
+        <div class="side-hot-list">
+          <div class="side-hot-item"><span class="side-hot-num">1</span><a href="#section-featured">选秀后台录音第三段文件创建时间</a></div>
+          <div class="side-hot-item"><span class="side-hot-num">2</span><a href="#section-featured">刷单风波双方声明数字差异</a></div>
+          <div class="side-hot-item"><span class="side-hot-num">3</span><a href="#section-featured">MCN合约附件签字页缺失问题</a></div>
+          <div class="side-hot-item"><span class="side-hot-num">4</span><a href="#section-featured">综艺反应镜头前置案例对比</a></div>
+          <div class="side-hot-item"><span class="side-hot-num">5</span><a href="#section-featured">后援会刊例价截图周期矛盾</a></div>
+        </div>
+      </div>
+
+      <div class="side-box" id="side-timeline">
+        <h3>近三日更新</h3>
+        <div class="side-timeline">
+          <div class="side-tl-item"><span class="tl-date">11-08</span><span class="tl-text">选秀录音补充第三位工作人员证言</span></div>
+          <div class="side-tl-item"><span class="tl-date">11-07</span><span class="tl-text">刷单风波主播团队第二份声明</span></div>
+          <div class="side-tl-item"><span class="tl-date">11-06</span><span class="tl-text">MCN纠纷仲裁立案信息确认</span></div>
+          <div class="side-tl-item"><span class="tl-date">11-05</span><span class="tl-text">综艺剪辑条目新增后期采访</span></div>
+        </div>
+      </div>
+
+      <div class="side-box" id="side-tags">
+        <h3>高频关键词</h3>
+        <div class="side-tags">
+          <a href="#section-featured">后台录音</a>
+          <a href="#section-featured">退款率</a>
+          <a href="#section-featured">保底收益</a>
+          <a href="#section-featured">反应镜头</a>
+          <a href="#section-featured">解约声明</a>
+          <a href="#section-featured">应援账目</a>
+          <a href="#section-featured">仲裁受理</a>
+          <a href="#section-featured">附件签字页</a>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- 回到顶部 -->
+  <button class="back-top" id="backTop" aria-label="回到顶部">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-text">黑料<em>海角</em>网</span>
+          <p class="footer-desc">覆盖2026年10月至11月的圈内争议条目，以录音整理、合同条款、数据截图三类素材为主，按事件进展持续追加当事人回应与第三方佐证。条目通常在事件曝光后24小时内建立，后续按“事实—回应—核实”三层更新。</p>
+        </div>
+        <div class="footer-col">
+          <h4>内容分类</h4>
+          <a href="#section-categories">选秀综艺争议</a>
+          <a href="#section-categories">直播电商纠纷</a>
+          <a href="#section-categories">MCN与达人合约</a>
+          <a href="#section-categories">综艺后期剪辑</a>
+        </div>
+        <div class="footer-col">
+          <h4>阅读入口</h4>
+          <a href="#section-featured">精选爆料</a>
+          <a href="#section-updates">最新动态</a>
+          <a href="#section-deep">深度解析</a>
+          <a href="#section-rank">热门榜单</a>
+        </div>
+        <div class="footer-col">
+          <h4>参与互动</h4>
+          <a href="#section-submit">投稿线索</a>
+          <a href="#section-comments">用户评论</a>
+          <a href="#section-faq">常见问题</a>
+          <a href="#section-guide">阅读指南</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 黑料海角网 · 内容为社区整理与示例条目，具体事实以当事人公开材料为准</span>
+        <span class="update-note">最近更新 <b>2026年11月8日</b> · 对应条目：选秀后台录音补充证言</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      'use strict';
+
+      // 平滑滚动 & 导航收起
+      var mainNav = document.getElementById('mainNav');
+      var hamburger = document.getElementById('hamburger');
+      var overlay = document.getElementById('drawerOverlay');
+
+      function closeNav() {
+        mainNav.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        overlay.classList.remove('show');
+        document.body.style.overflow = '';
+      }
+      function openNav() {
+        mainNav.classList.add('open');
+        hamburger.setAttribute('aria-expanded', 'true');
+        overlay.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      }
+
+      if (hamburger) {
+        hamburger.addEventListener('click', function() {
+          if (mainNav.classList.contains('open')) { closeNav(); } else { openNav(); }
+        });
+      }
+      if (overlay) {
+        overlay.addEventListener('click', closeNav);
+      }
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') { closeNav(); }
+      });
+
+      // 导航链接点击后收起（移动端）
+      mainNav.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (window.innerWidth <= 740) { closeNav(); }
+        });
+      });
+
+      // 页内平滑滚动（考虑吸顶偏移）
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          var targetId = this.getAttribute('href');
+          if (targetId === '#' || targetId === '') return;
+          var target = document.querySelector(targetId);
+          if (!target) return;
+          e.preventDefault();
+          var offset = document.documentElement.style.getPropertyValue('--offset');
+          var headerH = 58, noticeH = 40;
+          if (window.innerWidth <= 740) { headerH = 54; noticeH = 36; }
+          var scrollTop = target.getBoundingClientRect().top + window.pageYOffset - (headerH + noticeH + 12);
+          window.scrollTo({ top: scrollTop, behavior: 'smooth' });
+        });
+      });
+
+      // 侧栏频道高亮
+      var channelLinks = document.querySelectorAll('.channel-nav a');
+      var sections = [];
+      channelLinks.forEach(function(link) {
+        var id = link.getAttribute('href');
+        if (id && id.startsWith('#')) {
+          var sec = document.querySelector(id);
+          if (sec) sections.push({ link: link, sec: sec });
+        }
+      });
+
+      function updateActiveChannel() {
+        var scrollPos = window.scrollY + 140;
+        var current = null;
+        sections.forEach(function(item) {
+          if (item.sec.offsetTop <= scrollPos) { current = item; }
+        });
+        channelLinks.forEach(function(l) { l.classList.remove('active'); });
+        if (current) { current.link.classList.add('active'); }
+      }
+      window.addEventListener('scroll', updateActiveChannel, { passive: true });
+      updateActiveChannel();
+
+      // 回到顶部
+      var backTop = document.getElementById('backTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > window.innerHeight) {
+          backTop.classList.add('show');
+        } else {
+          backTop.classList.remove('show');
+        }
+      }, { passive: true });
+      backTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // 搜索功能：本地筛选精选卡片与更新条目
+      var searchInput = document.getElementById('searchInput');
+      var searchBtn = document.getElementById('searchBtn');
+
+      function performSearch() {
+        var q = (searchInput.value || '').trim().toLowerCase();
+        if (!q) {
+          document.querySelectorAll('.content-card').forEach(function(c) { c.style.display = ''; });
+          document.querySelectorAll('.update-item').forEach(function(u) { u.style.display = ''; });
+          return;
+        }
+        var matchCount = 0;
+        document.querySelectorAll('.content-card').forEach(function(card) {
+          var text = (card.textContent || '').toLowerCase();
+          if (text.indexOf(q) > -1) { card.style.display = ''; matchCount++; }
+          else { card.style.display = 'none'; }
+        });
+        document.querySelectorAll('.update-item').forEach(function(item) {
+          var text = (item.textContent || '').toLowerCase();
+          if (text.indexOf(q) > -1) { item.style.display = ''; matchCount++; }
+          else { item.style.display = 'none'; }
+        });
+        var featuredSection = document.getElementById('section-featured');
+        if (matchCount === 0) {
+          var tip = document.getElementById('searchNoResult');
+          if (!tip) {
+            tip = document.createElement('p');
+            tip.id = 'searchNoResult';
+            tip.style.cssText = 'margin-top:12px;font-size:13px;color:#c0392b;';
+            featuredSection.querySelector('.card-grid').after(tip);
+          }
+          tip.textContent = '没有找到与“' + searchInput.value.trim() + '”匹配的条目，试试“录音”“退款”“合约”等关键词。';
+        } else {
+          var tip2 = document.getElementById('searchNoResult');
+          if (tip2) tip2.remove();
+        }
+      }
+
+      if (searchBtn) {
+        searchBtn.addEventListener('click', performSearch);
+      }
+      if (searchInput) {
+        searchInput.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter') { performSearch(); }
+        });
+      }
+
+      // 投稿按钮滚动
+      document.querySelectorAll('[data-scroll-to]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var target = document.querySelector(this.getAttribute('data-scroll-to'));
+          if (target) {
+            var headerH = window.innerWidth <= 740 ? 54 : 58;
+            var noticeH = window.innerWidth <= 740 ? 36 : 40;
+            var top = target.getBoundingClientRect().top + window.pageYOffset - (headerH + noticeH + 12);
+            window.scrollTo({ top: top, behavior: 'smooth' });
+          }
+        });
+      });
+
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "黑料海角网",
+    "description": "汇聚圈内热点爆料、社区争议与当事人回应，提供精选条目、分类索引、深度解析与用户评论。",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "选秀后台录音里第三位说话人确认身份了吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "截至11月8日，第三位说话人的身份仍标注为待核实。节目组10月31日声明只确认存在排练时间调整，没有回应录音中具体人员的身份问题。条目中列出了两种指认说法，均来自匿名信源，未获交叉印证。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "直播刷单风波里品牌方晒的退款率47%是怎么算的？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "按品牌方后台截图，支付订单12,340笔，退款订单5,802笔，5,802除以12,340约等于47.0%。主播团队11月7日声明给出的数字是退货5,600单，对应退款率约46.7%。两组数据的差额主要来自统计时间窗口不同。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "MCN合约里的保底收益条款，附件和正文冲突时以哪个为准？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "合同一般约定附件与正文具有同等效力，冲突时以双方另行签署的补充协议或附件中特别约定为准。这起纠纷的关键在于附件第3条是否有达人签字确认。目前公开材料中没有看到签字页。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "综艺剪辑争议里反应镜头前置算违规吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "行业通行做法是：如果反应镜头被挪到不同语境下使用，且改变了观众对嘉宾态度或事件因果的理解，需要在片尾或平台页面作出说明。多数综艺合同会约定剪辑需符合公序良俗，但不会细化到镜头顺序。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "粉丝后援会账目争议里8.6万元支出有对应凭证吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "前管理员公开的账目截图显示该笔支出摘要为线下应援物料，无发票附件。11月3日一位自称2025年担任财务的网友留言称对应的是生日地铁广告位，并贴出一张刊例价截图，但截图中广告位周期为两周，与账目记录的一个月不一致。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "品牌代言解约公告里合作理念调整通常指什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "在品牌代言语境下，这个措辞一般对应三种情况：品牌方营销策略转向、艺人方面出现舆论风险、或双方在续约条件上未达成一致。该品牌2025年财报显示营销费用同比缩减18%，代言人支出占比从12%降至7%。"
+        }
+      }
+    ]
+  }
+  </script>
+
+</body>
+                </html>
